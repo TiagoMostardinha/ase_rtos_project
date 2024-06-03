@@ -1,0 +1,12 @@
+{
+    "files.associations": {
+        "bme280_defs.h": "c",
+        "i2c_master.h": "c",
+        "freertos.h": "c",
+        "bitset": "c",
+        "algorithm": "c",
+        "format": "c",
+        "esp_vfs_fat.h": "c",
+        "bme280.h": "c"
+    }
+}
