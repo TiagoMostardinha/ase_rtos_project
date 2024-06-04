@@ -7,6 +7,11 @@
         "algorithm": "c",
         "format": "c",
         "esp_vfs_fat.h": "c",
-        "bme280.h": "c"
+        "bme280.h": "c",
+        "stdint.h": "c",
+        "esp_wifi.h": "c",
+        "esp_event.h": "c",
+        "wifi.h": "c",
+        "esp_system.h": "c"
     }
 }

@@ -1,0 +1,857 @@
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x1 (POWERON),boot:0xf (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x1738
+load:0x403cc710,len:0xb9c
+load:0x403ce710,len:0x2e40
+entry 0x403cc71a
+[0;32mI (30) boot: ESP-IDF v5.2.1-dirty 2nd stage bootloader[0m
+[0;32mI (30) boot: compile time Jun  4 2024 03:45:06[0m
+[0;32mI (30) boot: chip revision: v0.3[0m
+[0;32mI (34) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (39) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (43) boot.esp32c3: SPI Flash Size : 2MB[0m
+[0;32mI (48) boot: Enabling RNG early entropy source...[0m
+[0;32mI (53) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (64) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (72) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (79) boot:  2 factory          factory app      00 00 00010000 00177000[0m
+[0;32mI (87) boot: End of partition table[0m
+[0;32mI (91) esp_image: segment 0: paddr=00010020 vaddr=3c0c0020 size=2aa48h (174664) map[0m
+[0;32mI (127) esp_image: segment 1: paddr=0003aa70 vaddr=3fc93e00 size=02f98h ( 12184) load[0m
+[0;32mI (129) esp_image: segment 2: paddr=0003da10 vaddr=40380000 size=02608h (  9736) load[0m
+[0;32mI (134) esp_image: segment 3: paddr=00040020 vaddr=42000020 size=bf6a8h (784040) map[0m
+[0;32mI (263) esp_image: segment 4: paddr=000ff6d0 vaddr=40382608 size=11660h ( 71264) load[0m
+[0;32mI (283) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (283) boot: Disabling RNG early entropy source...[0m
+[0;32mI (295) cpu_start: Unicore app[0m
+[0;32mI (303) cpu_start: Pro cpu start user code[0m
+[0;32mI (303) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (303) cpu_start: Application information:[0m
+[0;32mI (306) cpu_start: Project name:     boat[0m
+[0;32mI (311) cpu_start: App version:      563c37d-dirty[0m
+[0;32mI (316) cpu_start: Compile time:     Jun  4 2024 03:44:55[0m
+[0;32mI (323) cpu_start: ELF file SHA256:  5d26a8c7c...[0m
+[0;32mI (328) cpu_start: ESP-IDF:          v5.2.1-dirty[0m
+[0;32mI (333) cpu_start: Min chip rev:     v0.3[0m
+[0;32mI (338) cpu_start: Max chip rev:     v1.99 [0m
+[0;32mI (343) cpu_start: Chip rev:         v0.3[0m
+[0;32mI (348) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (355) heap_init: At 3FC9B5B0 len 00024A50 (146 KiB): RAM[0m
+[0;32mI (361) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (368) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (375) heap_init: At 50000010 len 00001FD8 (7 KiB): RTCRAM[0m
+[0;32mI (382) spi_flash: detected chip: generic[0m
+[0;32mI (386) spi_flash: flash io: dio[0m
+[0;33mW (390) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (403) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (410) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (417) main_task: Started on CPU0[0m
+[0;32mI (417) main_task: Calling app_main()[0m
+[0;32mI (417) BME280: Starting BME280...[0m
+[0;32mI (437) pp: pp rom version: 9387209[0m
+[0;32mI (437) net80211: net80211 rom version: 9387209[0m
+I (447) wifi:wifi driver task: 3fca4160, prio:23, stack:6656, core=0
+I (447) wifi:wifi firmware version: a9f5b59
+I (447) wifi:wifi certification version: v7.0
+I (447) wifi:config NVS flash: enabled
+I (447) wifi:config nano formating: disabled
+I (457) wifi:Init data frame dynamic rx buffer num: 32
+I (457) wifi:Init static rx mgmt buffer num: 5
+I (467) wifi:Init management short buffer num: 32
+I (467) wifi:Init dynamic tx buffer num: 32
+I (477) wifi:Init static tx FG buffer num: 2
+I (477) wifi:Init static rx buffer size: 1600
+I (477) wifi:Init static rx buffer num: 10
+I (487) wifi:Init dynamic rx buffer num: 32
+[0;32mI (487) wifi_init: rx ba win: 6[0m
+[0;32mI (497) wifi_init: tcpip mbox: 32[0m
+[0;32mI (497) wifi_init: udp mbox: 6[0m
+[0;32mI (497) wifi_init: tcp mbox: 6[0m
+[0;32mI (507) wifi_init: tcp tx win: 5760[0m
+[0;32mI (507) wifi_init: tcp rx win: 5760[0m
+[0;32mI (507) wifi_init: tcp mss: 1440[0m
+[0;32mI (517) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (517) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (527) phy_init: phy_version 1150,7c3c08f,Jan 24 2024,17:32:21[0m
+I (567) wifi:mode : sta (68:67:25:e8:3e:24)
+I (567) wifi:enable tsf
+[0;32mI (577) wifi station: wifi_init_sta finished.[0m
+I (577) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1
+I (577) wifi:state: init -> auth (b0)
+I (617) wifi:state: auth -> assoc (0)
+I (617) wifi:state: assoc -> run (10)
+I (627) wifi:connected with fedora40, aid = 1, channel 11, BW20, bssid = ae:04:78:e8:ff:28
+I (627) wifi:security: WPA2-PSK, phy: bgn, rssi: -40
+I (637) wifi:pm start, type: 1
+
+I (637) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us
+I (647) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000
+I (667) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us
+I (667) wifi:AP's beacon interval = 102400 us, DTIM period = 2
+[0;32mI (1647) esp_netif_handlers: sta ip: 10.42.0.40, mask: 255.255.255.0, gw: 10.42.0.1[0m
+[0;32mI (1647) wifi station: got ip:10.42.0.40[0m
+[0;32mI (1647) wifi station: connected to ap SSID:fedora40 password:fedora40[0m
+[0;32mI (1657) mqtt: Other event id:7[0m
+[0;32mI (1657) BME280: Initializing BME280...[0m
+[0;32mI (1657) gpio: GPIO[3]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (1667) gpio: GPIO[2]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (1677) mqtt: MQTT_EVENT_CONNECTED[0m
+[0;32mI (1687) mqtt: sent subscribe successful, msg_id=46975[0m
+[0;32mI (1687) mqtt: sent subscribe successful, msg_id=51303[0m
+[0;32mI (1697) mqtt: MQTT_EVENT_SUBSCRIBED, msg_id=46975[0m
+[0;32mI (1707) mqtt: MQTT_EVENT_SUBSCRIBED, msg_id=51303[0m
+[0;32mI (1707) BME280: Setting BME280 sensor...[0m
+[0;32mI (1707) BME280: Getting BME280 calibration data...[0m
+[0;32mI (1817) BME280: Setting BME280 in normal mode...[0m
+[0;32mI (1817) SDSPI: Initializing SD card...[0m
+[0;32mI (1817) SDSPI: Mounting SD card...[0m
+[0;32mI (1817) gpio: GPIO[1]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (1827) sdspi_transaction: cmd=52, R1 response: command not supported[0m
+[0;32mI (1877) sdspi_transaction: cmd=5, R1 response: command not supported[0m
+Name: APPSD
+Type: SDHC/SDXC
+Speed: 20.00 MHz (limit: 20.00 MHz)
+Size: 256001MB
+CSD: ver=2, sector_size=512, capacity=524290048 read_bl_len=9
+SSR: bus_width=1
+[0;32mI (2907) BME280: Temperature: 28.21 C, Pressure: 3.79 Pa, Humidity: 41.94 %[0m
+[0;32mI (2907) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (3007) BME280: Temperature: 28.21 C, Pressure: 3.97 Pa, Humidity: 41.94 %[0m
+[0;32mI (3007) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (3107) BME280: Temperature: 28.21 C, Pressure: 3.97 Pa, Humidity: 41.96 %[0m
+[0;32mI (3107) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (3207) BME280: Temperature: 28.21 C, Pressure: 3.97 Pa, Humidity: 41.94 %[0m
+[0;32mI (3207) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (3307) BME280: Temperature: 28.21 C, Pressure: 3.97 Pa, Humidity: 41.93 %[0m
+[0;32mI (3307) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (3407) BME280: Temperature: 28.21 C, Pressure: 3.97 Pa, Humidity: 41.90 %[0m
+[0;32mI (3407) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (3507) BME280: Temperature: 28.21 C, Pressure: 3.97 Pa, Humidity: 41.88 %[0m
+[0;32mI (3507) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (3607) BME280: Temperature: 28.21 C, Pressure: 3.97 Pa, Humidity: 41.87 %[0m
+[0;32mI (3607) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (3707) BME280: Temperature: 28.20 C, Pressure: 3.97 Pa, Humidity: 41.88 %[0m
+[0;32mI (3707) MQTT: Sending data to MQTT broker...[0m
+I (3717) wifi:<ba-add>idx:0 (ifx:0, ae:04:78:e8:ff:28), tid:0, ssn:17, winSize:64
+[0;32mI (3807) BME280: Temperature: 28.20 C, Pressure: 3.97 Pa, Humidity: 41.86 %[0m
+[0;32mI (3807) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (3907) BME280: Temperature: 28.20 C, Pressure: 3.97 Pa, Humidity: 41.84 %[0m
+[0;32mI (3907) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (4007) BME280: Temperature: 28.20 C, Pressure: 3.97 Pa, Humidity: 41.82 %[0m
+[0;32mI (4007) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (4107) BME280: Temperature: 28.20 C, Pressure: 3.97 Pa, Humidity: 41.82 %[0m
+[0;32mI (4107) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (4207) BME280: Temperature: 28.20 C, Pressure: 3.97 Pa, Humidity: 41.81 %[0m
+[0;32mI (4207) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (4307) BME280: Temperature: 28.20 C, Pressure: 3.97 Pa, Humidity: 41.79 %[0m
+[0;32mI (4307) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (4407) BME280: Temperature: 28.20 C, Pressure: 3.97 Pa, Humidity: 41.79 %[0m
+[0;32mI (4407) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (4507) BME280: Temperature: 28.20 C, Pressure: 3.97 Pa, Humidity: 41.76 %[0m
+[0;32mI (4507) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (4607) BME280: Temperature: 28.20 C, Pressure: 3.97 Pa, Humidity: 41.76 %[0m
+[0;32mI (4607) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (4707) BME280: Temperature: 28.20 C, Pressure: 3.97 Pa, Humidity: 41.79 %[0m
+[0;32mI (4707) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (4807) BME280: Temperature: 28.20 C, Pressure: 3.97 Pa, Humidity: 41.80 %[0m
+[0;32mI (4807) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (4907) BME280: Temperature: 28.20 C, Pressure: 3.97 Pa, Humidity: 41.81 %[0m
+[0;32mI (4907) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (5007) BME280: Temperature: 28.20 C, Pressure: 3.97 Pa, Humidity: 41.80 %[0m
+[0;32mI (5007) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (5107) BME280: Temperature: 28.20 C, Pressure: 3.97 Pa, Humidity: 41.80 %[0m
+[0;32mI (5107) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (5207) BME280: Temperature: 28.20 C, Pressure: 3.97 Pa, Humidity: 41.79 %[0m
+[0;32mI (5207) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (5307) BME280: Temperature: 28.20 C, Pressure: 3.97 Pa, Humidity: 41.76 %[0m
+[0;32mI (5307) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (5407) BME280: Temperature: 28.20 C, Pressure: 3.97 Pa, Humidity: 41.79 %[0m
+[0;32mI (5407) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (5507) BME280: Temperature: 28.20 C, Pressure: 3.97 Pa, Humidity: 41.74 %[0m
+[0;32mI (5507) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (5607) BME280: Temperature: 28.20 C, Pressure: 3.97 Pa, Humidity: 41.74 %[0m
+[0;32mI (5607) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (5707) BME280: Temperature: 28.20 C, Pressure: 3.97 Pa, Humidity: 41.71 %[0m
+[0;32mI (5707) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (5807) BME280: Temperature: 28.20 C, Pressure: 3.97 Pa, Humidity: 41.73 %[0m
+[0;32mI (5807) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (5907) BME280: Temperature: 28.20 C, Pressure: 3.97 Pa, Humidity: 41.68 %[0m
+[0;32mI (5907) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (6007) BME280: Temperature: 28.20 C, Pressure: 3.97 Pa, Humidity: 41.70 %[0m
+[0;32mI (6007) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (6107) BME280: Temperature: 28.20 C, Pressure: 3.97 Pa, Humidity: 41.68 %[0m
+[0;32mI (6107) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (6207) BME280: Temperature: 28.20 C, Pressure: 3.97 Pa, Humidity: 41.68 %[0m
+[0;32mI (6207) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (6307) BME280: Temperature: 28.20 C, Pressure: 3.97 Pa, Humidity: 41.66 %[0m
+[0;32mI (6307) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (6407) BME280: Temperature: 28.20 C, Pressure: 3.97 Pa, Humidity: 41.67 %[0m
+[0;32mI (6407) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (6507) BME280: Temperature: 28.20 C, Pressure: 3.97 Pa, Humidity: 41.66 %[0m
+[0;32mI (6507) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (6607) BME280: Temperature: 28.20 C, Pressure: 3.97 Pa, Humidity: 41.65 %[0m
+[0;32mI (6607) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (6707) BME280: Temperature: 28.20 C, Pressure: 3.97 Pa, Humidity: 41.65 %[0m
+[0;32mI (6707) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (6807) BME280: Temperature: 28.20 C, Pressure: 3.97 Pa, Humidity: 41.64 %[0m
+[0;32mI (6807) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (6907) BME280: Temperature: 28.20 C, Pressure: 3.97 Pa, Humidity: 41.64 %[0m
+[0;32mI (6907) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (7007) BME280: Temperature: 28.20 C, Pressure: 3.97 Pa, Humidity: 41.63 %[0m
+[0;32mI (7007) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (7107) BME280: Temperature: 28.20 C, Pressure: 3.97 Pa, Humidity: 41.64 %[0m
+[0;32mI (7107) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (7207) BME280: Temperature: 28.20 C, Pressure: 3.97 Pa, Humidity: 41.64 %[0m
+[0;32mI (7207) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (7307) BME280: Temperature: 28.20 C, Pressure: 3.97 Pa, Humidity: 41.64 %[0m
+[0;32mI (7307) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (7407) BME280: Temperature: 28.20 C, Pressure: 3.97 Pa, Humidity: 41.62 %[0m
+[0;32mI (7407) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (7507) BME280: Temperature: 28.20 C, Pressure: 3.97 Pa, Humidity: 41.64 %[0m
+[0;32mI (7507) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (7607) BME280: Temperature: 28.20 C, Pressure: 3.97 Pa, Humidity: 41.62 %[0m
+[0;32mI (7607) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (7707) BME280: Temperature: 28.20 C, Pressure: 3.97 Pa, Humidity: 41.63 %[0m
+[0;32mI (7707) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (7807) BME280: Temperature: 28.20 C, Pressure: 3.97 Pa, Humidity: 41.62 %[0m
+[0;32mI (7807) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (7907) BME280: Temperature: 28.20 C, Pressure: 3.97 Pa, Humidity: 41.62 %[0m
+[0;32mI (7907) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (8007) BME280: Temperature: 28.20 C, Pressure: 3.97 Pa, Humidity: 41.61 %[0m
+[0;32mI (8007) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (8107) BME280: Temperature: 28.20 C, Pressure: 3.97 Pa, Humidity: 41.64 %[0m
+[0;32mI (8107) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (8207) BME280: Temperature: 28.20 C, Pressure: 3.97 Pa, Humidity: 41.62 %[0m
+[0;32mI (8207) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (8307) BME280: Temperature: 28.20 C, Pressure: 3.97 Pa, Humidity: 41.64 %[0m
+[0;32mI (8307) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (8407) BME280: Temperature: 28.20 C, Pressure: 3.97 Pa, Humidity: 41.65 %[0m
+[0;32mI (8407) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (8507) BME280: Temperature: 28.20 C, Pressure: 3.97 Pa, Humidity: 41.64 %[0m
+[0;32mI (8507) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (8607) BME280: Temperature: 28.20 C, Pressure: 3.97 Pa, Humidity: 41.65 %[0m
+[0;32mI (8607) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (8707) BME280: Temperature: 28.20 C, Pressure: 3.97 Pa, Humidity: 41.65 %[0m
+[0;32mI (8707) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (8807) BME280: Temperature: 28.20 C, Pressure: 3.97 Pa, Humidity: 41.66 %[0m
+[0;32mI (8807) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (8907) BME280: Temperature: 28.20 C, Pressure: 3.97 Pa, Humidity: 41.68 %[0m
+[0;32mI (8907) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (9007) BME280: Temperature: 28.20 C, Pressure: 3.97 Pa, Humidity: 41.68 %[0m
+[0;32mI (9007) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (9107) BME280: Temperature: 28.19 C, Pressure: 3.97 Pa, Humidity: 41.69 %[0m
+[0;32mI (9107) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (9207) BME280: Temperature: 28.20 C, Pressure: 3.97 Pa, Humidity: 41.68 %[0m
+[0;32mI (9207) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (9307) BME280: Temperature: 28.19 C, Pressure: 3.97 Pa, Humidity: 41.69 %[0m
+[0;32mI (9307) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (9407) BME280: Temperature: 28.19 C, Pressure: 3.97 Pa, Humidity: 41.69 %[0m
+[0;32mI (9407) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (9507) BME280: Temperature: 28.20 C, Pressure: 3.97 Pa, Humidity: 41.67 %[0m
+[0;32mI (9507) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (9607) BME280: Temperature: 28.19 C, Pressure: 3.97 Pa, Humidity: 41.68 %[0m
+[0;32mI (9607) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (9707) BME280: Temperature: 28.20 C, Pressure: 3.97 Pa, Humidity: 41.66 %[0m
+[0;32mI (9707) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (9807) BME280: Temperature: 28.20 C, Pressure: 3.97 Pa, Humidity: 41.66 %[0m
+[0;32mI (9807) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (9907) BME280: Temperature: 28.19 C, Pressure: 3.97 Pa, Humidity: 41.66 %[0m
+[0;32mI (9907) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (10007) BME280: Temperature: 28.19 C, Pressure: 3.97 Pa, Humidity: 41.66 %[0m
+[0;32mI (10007) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (10107) BME280: Temperature: 28.20 C, Pressure: 3.97 Pa, Humidity: 41.66 %[0m
+[0;32mI (10107) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (10207) BME280: Temperature: 28.20 C, Pressure: 3.97 Pa, Humidity: 41.65 %[0m
+[0;32mI (10207) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (10307) BME280: Temperature: 28.20 C, Pressure: 3.97 Pa, Humidity: 41.66 %[0m
+[0;32mI (10307) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (10407) BME280: Temperature: 28.19 C, Pressure: 3.97 Pa, Humidity: 41.64 %[0m
+[0;32mI (10407) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (10507) BME280: Temperature: 28.19 C, Pressure: 3.97 Pa, Humidity: 41.62 %[0m
+[0;32mI (10507) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (10607) BME280: Temperature: 28.19 C, Pressure: 3.97 Pa, Humidity: 41.61 %[0m
+[0;32mI (10607) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (10707) BME280: Temperature: 28.19 C, Pressure: 3.97 Pa, Humidity: 41.62 %[0m
+[0;32mI (10707) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (10807) BME280: Temperature: 28.19 C, Pressure: 3.97 Pa, Humidity: 41.61 %[0m
+[0;32mI (10807) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (10907) BME280: Temperature: 28.19 C, Pressure: 3.97 Pa, Humidity: 41.62 %[0m
+[0;32mI (10907) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (11007) BME280: Temperature: 28.19 C, Pressure: 3.97 Pa, Humidity: 41.62 %[0m
+[0;32mI (11007) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (11107) BME280: Temperature: 28.19 C, Pressure: 3.97 Pa, Humidity: 41.61 %[0m
+[0;32mI (11107) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (11207) BME280: Temperature: 28.19 C, Pressure: 3.97 Pa, Humidity: 41.60 %[0m
+[0;32mI (11207) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (11307) BME280: Temperature: 28.19 C, Pressure: 3.97 Pa, Humidity: 41.59 %[0m
+[0;32mI (11307) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (11407) BME280: Temperature: 28.19 C, Pressure: 3.97 Pa, Humidity: 41.60 %[0m
+[0;32mI (11407) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (11507) BME280: Temperature: 28.19 C, Pressure: 3.97 Pa, Humidity: 41.59 %[0m
+[0;32mI (11507) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (11607) BME280: Temperature: 28.19 C, Pressure: 3.97 Pa, Humidity: 41.59 %[0m
+[0;32mI (11607) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (11707) BME280: Temperature: 28.19 C, Pressure: 3.97 Pa, Humidity: 41.60 %[0m
+[0;32mI (11707) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (11807) BME280: Temperature: 28.19 C, Pressure: 3.97 Pa, Humidity: 41.59 %[0m
+[0;32mI (11807) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (11907) BME280: Temperature: 28.19 C, Pressure: 3.97 Pa, Humidity: 41.71 %[0m
+[0;32mI (11907) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (12007) BME280: Temperature: 28.19 C, Pressure: 3.97 Pa, Humidity: 41.89 %[0m
+[0;32mI (12007) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (12107) BME280: Temperature: 28.19 C, Pressure: 3.97 Pa, Humidity: 42.00 %[0m
+[0;32mI (12107) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (12207) BME280: Temperature: 28.19 C, Pressure: 3.97 Pa, Humidity: 42.13 %[0m
+[0;32mI (12207) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (12307) BME280: Temperature: 28.19 C, Pressure: 3.97 Pa, Humidity: 42.23 %[0m
+[0;32mI (12307) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (12407) BME280: Temperature: 28.19 C, Pressure: 3.97 Pa, Humidity: 42.25 %[0m
+[0;32mI (12407) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (12507) BME280: Temperature: 28.19 C, Pressure: 3.97 Pa, Humidity: 42.28 %[0m
+[0;32mI (12507) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (12607) BME280: Temperature: 28.19 C, Pressure: 3.97 Pa, Humidity: 42.31 %[0m
+[0;32mI (12607) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (12707) BME280: Temperature: 28.18 C, Pressure: 3.97 Pa, Humidity: 42.31 %[0m
+[0;32mI (12707) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (12807) BME280: Temperature: 28.19 C, Pressure: 3.97 Pa, Humidity: 42.29 %[0m
+[0;32mI (12807) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (12907) BME280: Temperature: 28.19 C, Pressure: 3.97 Pa, Humidity: 42.27 %[0m
+[0;32mI (12907) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (13007) BME280: Temperature: 28.19 C, Pressure: 3.97 Pa, Humidity: 42.28 %[0m
+[0;32mI (13007) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (13107) BME280: Temperature: 28.19 C, Pressure: 3.97 Pa, Humidity: 42.27 %[0m
+[0;32mI (13107) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (13207) BME280: Temperature: 28.19 C, Pressure: 3.97 Pa, Humidity: 42.27 %[0m
+[0;32mI (13207) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (13307) BME280: Temperature: 28.19 C, Pressure: 3.97 Pa, Humidity: 42.30 %[0m
+[0;32mI (13307) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (13407) BME280: Temperature: 28.19 C, Pressure: 3.97 Pa, Humidity: 42.34 %[0m
+[0;32mI (13407) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (13507) BME280: Temperature: 28.19 C, Pressure: 3.97 Pa, Humidity: 42.37 %[0m
+[0;32mI (13507) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (13607) BME280: Temperature: 28.19 C, Pressure: 3.97 Pa, Humidity: 42.41 %[0m
+[0;32mI (13607) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (13707) BME280: Temperature: 28.18 C, Pressure: 3.97 Pa, Humidity: 42.45 %[0m
+[0;32mI (13707) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (13807) BME280: Temperature: 28.19 C, Pressure: 3.97 Pa, Humidity: 42.47 %[0m
+[0;32mI (13807) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (13907) BME280: Temperature: 28.19 C, Pressure: 3.97 Pa, Humidity: 42.51 %[0m
+[0;32mI (13907) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (14007) BME280: Temperature: 28.18 C, Pressure: 3.97 Pa, Humidity: 42.57 %[0m
+[0;32mI (14007) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (14107) BME280: Temperature: 28.18 C, Pressure: 3.97 Pa, Humidity: 42.58 %[0m
+[0;32mI (14107) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (14207) BME280: Temperature: 28.18 C, Pressure: 3.97 Pa, Humidity: 42.58 %[0m
+[0;32mI (14207) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (14307) BME280: Temperature: 28.19 C, Pressure: 3.97 Pa, Humidity: 42.54 %[0m
+[0;32mI (14307) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (14407) BME280: Temperature: 28.18 C, Pressure: 3.97 Pa, Humidity: 42.57 %[0m
+[0;32mI (14407) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (14507) BME280: Temperature: 28.18 C, Pressure: 3.97 Pa, Humidity: 42.62 %[0m
+[0;32mI (14507) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (14607) BME280: Temperature: 28.19 C, Pressure: 3.97 Pa, Humidity: 42.66 %[0m
+[0;32mI (14607) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (14707) BME280: Temperature: 28.19 C, Pressure: 3.97 Pa, Humidity: 42.66 %[0m
+[0;32mI (14707) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (14807) BME280: Temperature: 28.19 C, Pressure: 3.97 Pa, Humidity: 42.71 %[0m
+[0;32mI (14807) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (14907) BME280: Temperature: 28.19 C, Pressure: 3.97 Pa, Humidity: 42.71 %[0m
+[0;32mI (14907) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (15007) BME280: Temperature: 28.19 C, Pressure: 3.97 Pa, Humidity: 42.72 %[0m
+[0;32mI (15007) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (15107) BME280: Temperature: 28.19 C, Pressure: 3.97 Pa, Humidity: 42.71 %[0m
+[0;32mI (15107) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (15207) BME280: Temperature: 28.19 C, Pressure: 3.97 Pa, Humidity: 42.71 %[0m
+[0;32mI (15207) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (15307) BME280: Temperature: 28.19 C, Pressure: 3.97 Pa, Humidity: 42.67 %[0m
+[0;32mI (15307) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (15407) BME280: Temperature: 28.19 C, Pressure: 3.97 Pa, Humidity: 42.66 %[0m
+[0;32mI (15407) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (15507) BME280: Temperature: 28.19 C, Pressure: 3.97 Pa, Humidity: 42.64 %[0m
+[0;32mI (15507) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (15607) BME280: Temperature: 28.19 C, Pressure: 3.97 Pa, Humidity: 42.62 %[0m
+[0;32mI (15607) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (15707) BME280: Temperature: 28.19 C, Pressure: 3.97 Pa, Humidity: 42.64 %[0m
+[0;32mI (15707) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (15807) BME280: Temperature: 28.19 C, Pressure: 3.97 Pa, Humidity: 42.68 %[0m
+[0;32mI (15807) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (15907) BME280: Temperature: 28.19 C, Pressure: 3.97 Pa, Humidity: 42.72 %[0m
+[0;32mI (15907) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (16007) BME280: Temperature: 28.19 C, Pressure: 3.97 Pa, Humidity: 42.72 %[0m
+[0;32mI (16007) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (16107) BME280: Temperature: 28.19 C, Pressure: 3.97 Pa, Humidity: 42.74 %[0m
+[0;32mI (16107) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (16207) BME280: Temperature: 28.19 C, Pressure: 3.97 Pa, Humidity: 42.74 %[0m
+[0;32mI (16207) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (16307) BME280: Temperature: 28.19 C, Pressure: 3.97 Pa, Humidity: 42.76 %[0m
+[0;32mI (16307) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (16407) BME280: Temperature: 28.19 C, Pressure: 3.97 Pa, Humidity: 42.77 %[0m
+[0;32mI (16407) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (16507) BME280: Temperature: 28.19 C, Pressure: 3.97 Pa, Humidity: 42.77 %[0m
+[0;32mI (16507) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (16607) BME280: Temperature: 28.19 C, Pressure: 3.97 Pa, Humidity: 42.77 %[0m
+[0;32mI (16607) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (16707) BME280: Temperature: 28.19 C, Pressure: 3.97 Pa, Humidity: 42.75 %[0m
+[0;32mI (16707) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (16807) BME280: Temperature: 28.19 C, Pressure: 3.97 Pa, Humidity: 42.76 %[0m
+[0;32mI (16807) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (16907) BME280: Temperature: 28.19 C, Pressure: 3.97 Pa, Humidity: 42.72 %[0m
+[0;32mI (16907) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (17007) BME280: Temperature: 28.19 C, Pressure: 3.97 Pa, Humidity: 42.68 %[0m
+[0;32mI (17007) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (17107) BME280: Temperature: 28.19 C, Pressure: 3.97 Pa, Humidity: 42.64 %[0m
+[0;32mI (17107) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (17207) BME280: Temperature: 28.19 C, Pressure: 3.97 Pa, Humidity: 42.61 %[0m
+[0;32mI (17207) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (17307) BME280: Temperature: 28.19 C, Pressure: 3.97 Pa, Humidity: 42.61 %[0m
+[0;32mI (17307) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (17407) BME280: Temperature: 28.19 C, Pressure: 3.97 Pa, Humidity: 42.60 %[0m
+[0;32mI (17407) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (17507) BME280: Temperature: 28.19 C, Pressure: 3.97 Pa, Humidity: 42.59 %[0m
+[0;32mI (17507) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (17607) BME280: Temperature: 28.19 C, Pressure: 3.97 Pa, Humidity: 42.53 %[0m
+[0;32mI (17607) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (17707) BME280: Temperature: 28.19 C, Pressure: 3.97 Pa, Humidity: 42.52 %[0m
+[0;32mI (17707) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (17807) BME280: Temperature: 28.19 C, Pressure: 3.97 Pa, Humidity: 42.50 %[0m
+[0;32mI (17807) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (17907) BME280: Temperature: 28.19 C, Pressure: 3.97 Pa, Humidity: 42.49 %[0m
+[0;32mI (17907) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (18007) BME280: Temperature: 28.19 C, Pressure: 3.97 Pa, Humidity: 42.47 %[0m
+[0;32mI (18007) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (18107) BME280: Temperature: 28.19 C, Pressure: 3.97 Pa, Humidity: 42.52 %[0m
+[0;32mI (18107) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (18207) BME280: Temperature: 28.19 C, Pressure: 3.97 Pa, Humidity: 42.61 %[0m
+[0;32mI (18207) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (18307) BME280: Temperature: 28.19 C, Pressure: 3.97 Pa, Humidity: 42.74 %[0m
+[0;32mI (18307) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (18407) BME280: Temperature: 28.19 C, Pressure: 3.97 Pa, Humidity: 42.87 %[0m
+[0;32mI (18407) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (18507) BME280: Temperature: 28.19 C, Pressure: 3.97 Pa, Humidity: 42.98 %[0m
+[0;32mI (18507) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (18607) BME280: Temperature: 28.19 C, Pressure: 3.97 Pa, Humidity: 43.10 %[0m
+[0;32mI (18607) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (18707) BME280: Temperature: 28.19 C, Pressure: 3.97 Pa, Humidity: 43.25 %[0m
+[0;32mI (18707) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (18807) BME280: Temperature: 28.19 C, Pressure: 3.97 Pa, Humidity: 43.38 %[0m
+[0;32mI (18807) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (18907) BME280: Temperature: 28.19 C, Pressure: 3.97 Pa, Humidity: 43.51 %[0m
+[0;32mI (18907) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (19007) BME280: Temperature: 28.18 C, Pressure: 3.97 Pa, Humidity: 43.60 %[0m
+[0;32mI (19007) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (19107) BME280: Temperature: 28.19 C, Pressure: 3.97 Pa, Humidity: 43.66 %[0m
+[0;32mI (19107) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (19207) BME280: Temperature: 28.19 C, Pressure: 3.97 Pa, Humidity: 43.72 %[0m
+[0;32mI (19207) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (19307) BME280: Temperature: 28.19 C, Pressure: 3.97 Pa, Humidity: 43.77 %[0m
+[0;32mI (19307) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (19407) BME280: Temperature: 28.19 C, Pressure: 3.97 Pa, Humidity: 43.81 %[0m
+[0;32mI (19407) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (19507) BME280: Temperature: 28.19 C, Pressure: 3.97 Pa, Humidity: 43.82 %[0m
+[0;32mI (19507) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (19607) BME280: Temperature: 28.20 C, Pressure: 3.97 Pa, Humidity: 43.84 %[0m
+[0;32mI (19607) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (19707) BME280: Temperature: 28.19 C, Pressure: 3.97 Pa, Humidity: 43.85 %[0m
+[0;32mI (19707) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (19807) BME280: Temperature: 28.20 C, Pressure: 3.97 Pa, Humidity: 43.85 %[0m
+[0;32mI (19807) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (19907) BME280: Temperature: 28.20 C, Pressure: 3.97 Pa, Humidity: 43.88 %[0m
+[0;32mI (19907) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (20007) BME280: Temperature: 28.19 C, Pressure: 3.97 Pa, Humidity: 43.88 %[0m
+[0;32mI (20007) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (20107) BME280: Temperature: 28.20 C, Pressure: 3.97 Pa, Humidity: 43.88 %[0m
+[0;32mI (20107) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (20207) BME280: Temperature: 28.20 C, Pressure: 3.97 Pa, Humidity: 43.88 %[0m
+[0;32mI (20207) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (20307) BME280: Temperature: 28.20 C, Pressure: 3.97 Pa, Humidity: 43.87 %[0m
+[0;32mI (20307) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (20407) BME280: Temperature: 28.20 C, Pressure: 3.97 Pa, Humidity: 43.84 %[0m
+[0;32mI (20407) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (20507) BME280: Temperature: 28.20 C, Pressure: 3.97 Pa, Humidity: 43.79 %[0m
+[0;32mI (20507) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (20607) BME280: Temperature: 28.20 C, Pressure: 3.97 Pa, Humidity: 43.75 %[0m
+[0;32mI (20607) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (20707) BME280: Temperature: 28.20 C, Pressure: 3.97 Pa, Humidity: 43.68 %[0m
+[0;32mI (20707) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (20807) BME280: Temperature: 28.20 C, Pressure: 3.97 Pa, Humidity: 43.64 %[0m
+[0;32mI (20807) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (20907) BME280: Temperature: 28.20 C, Pressure: 3.97 Pa, Humidity: 43.58 %[0m
+[0;32mI (20907) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (21007) BME280: Temperature: 28.20 C, Pressure: 3.97 Pa, Humidity: 43.52 %[0m
+[0;32mI (21007) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (21107) BME280: Temperature: 28.20 C, Pressure: 3.97 Pa, Humidity: 43.50 %[0m
+[0;32mI (21107) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (21207) BME280: Temperature: 28.20 C, Pressure: 3.97 Pa, Humidity: 43.45 %[0m
+[0;32mI (21207) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (21307) BME280: Temperature: 28.20 C, Pressure: 3.97 Pa, Humidity: 43.41 %[0m
+[0;32mI (21307) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (21407) BME280: Temperature: 28.20 C, Pressure: 3.97 Pa, Humidity: 43.37 %[0m
+[0;32mI (21407) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (21507) BME280: Temperature: 28.20 C, Pressure: 3.97 Pa, Humidity: 43.29 %[0m
+[0;32mI (21507) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (21607) BME280: Temperature: 28.20 C, Pressure: 3.97 Pa, Humidity: 43.23 %[0m
+[0;32mI (21607) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (21707) BME280: Temperature: 28.20 C, Pressure: 3.97 Pa, Humidity: 43.18 %[0m
+[0;32mI (21707) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (21807) BME280: Temperature: 28.20 C, Pressure: 3.97 Pa, Humidity: 43.14 %[0m
+[0;32mI (21807) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (21907) BME280: Temperature: 28.20 C, Pressure: 3.97 Pa, Humidity: 43.12 %[0m
+[0;32mI (21907) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (22007) BME280: Temperature: 28.20 C, Pressure: 3.97 Pa, Humidity: 43.08 %[0m
+[0;32mI (22007) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (22107) BME280: Temperature: 28.20 C, Pressure: 3.97 Pa, Humidity: 43.07 %[0m
+[0;32mI (22107) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (22207) BME280: Temperature: 28.20 C, Pressure: 3.97 Pa, Humidity: 43.04 %[0m
+[0;32mI (22207) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (22307) BME280: Temperature: 28.20 C, Pressure: 3.97 Pa, Humidity: 42.98 %[0m
+[0;32mI (22307) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (22407) BME280: Temperature: 28.20 C, Pressure: 3.97 Pa, Humidity: 42.96 %[0m
+[0;32mI (22407) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (22507) BME280: Temperature: 28.20 C, Pressure: 3.97 Pa, Humidity: 42.88 %[0m
+[0;32mI (22507) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (22607) BME280: Temperature: 28.20 C, Pressure: 3.97 Pa, Humidity: 42.86 %[0m
+[0;32mI (22607) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (22707) BME280: Temperature: 28.20 C, Pressure: 3.97 Pa, Humidity: 42.80 %[0m
+[0;32mI (22707) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (22807) BME280: Temperature: 28.20 C, Pressure: 3.97 Pa, Humidity: 42.76 %[0m
+[0;32mI (22807) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (22907) BME280: Temperature: 28.19 C, Pressure: 3.97 Pa, Humidity: 42.68 %[0m
+[0;32mI (22907) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (23007) BME280: Temperature: 28.20 C, Pressure: 3.97 Pa, Humidity: 42.65 %[0m
+[0;32mI (23007) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (23107) BME280: Temperature: 28.20 C, Pressure: 3.97 Pa, Humidity: 42.60 %[0m
+[0;32mI (23107) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (23207) BME280: Temperature: 28.20 C, Pressure: 3.97 Pa, Humidity: 42.53 %[0m
+[0;32mI (23207) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (23307) BME280: Temperature: 28.20 C, Pressure: 3.97 Pa, Humidity: 42.48 %[0m
+[0;32mI (23307) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (23407) BME280: Temperature: 28.19 C, Pressure: 3.97 Pa, Humidity: 42.44 %[0m
+[0;32mI (23407) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (23507) BME280: Temperature: 28.20 C, Pressure: 3.97 Pa, Humidity: 42.40 %[0m
+[0;32mI (23507) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (23607) BME280: Temperature: 28.20 C, Pressure: 3.97 Pa, Humidity: 42.38 %[0m
+[0;32mI (23607) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (23707) BME280: Temperature: 28.19 C, Pressure: 3.97 Pa, Humidity: 42.34 %[0m
+[0;32mI (23707) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (23807) BME280: Temperature: 28.20 C, Pressure: 3.97 Pa, Humidity: 42.32 %[0m
+[0;32mI (23807) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (23907) BME280: Temperature: 28.20 C, Pressure: 3.97 Pa, Humidity: 42.28 %[0m
+[0;32mI (23907) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (24007) BME280: Temperature: 28.20 C, Pressure: 3.97 Pa, Humidity: 42.28 %[0m
+[0;32mI (24007) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (24107) BME280: Temperature: 28.20 C, Pressure: 3.97 Pa, Humidity: 42.30 %[0m
+[0;32mI (24107) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (24207) BME280: Temperature: 28.20 C, Pressure: 3.97 Pa, Humidity: 42.34 %[0m
+[0;32mI (24207) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (24307) BME280: Temperature: 28.19 C, Pressure: 3.97 Pa, Humidity: 42.38 %[0m
+[0;32mI (24307) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (24407) BME280: Temperature: 28.20 C, Pressure: 3.97 Pa, Humidity: 42.45 %[0m
+[0;32mI (24407) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (24507) BME280: Temperature: 28.20 C, Pressure: 3.97 Pa, Humidity: 42.51 %[0m
+[0;32mI (24507) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (24607) BME280: Temperature: 28.21 C, Pressure: 3.97 Pa, Humidity: 42.57 %[0m
+[0;32mI (24607) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (24707) BME280: Temperature: 28.20 C, Pressure: 3.97 Pa, Humidity: 42.60 %[0m
+[0;32mI (24707) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (24807) BME280: Temperature: 28.20 C, Pressure: 3.97 Pa, Humidity: 42.63 %[0m
+[0;32mI (24807) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (24907) BME280: Temperature: 28.20 C, Pressure: 3.97 Pa, Humidity: 42.65 %[0m
+[0;32mI (24907) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (25007) BME280: Temperature: 28.20 C, Pressure: 3.97 Pa, Humidity: 42.66 %[0m
+[0;32mI (25007) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (25107) BME280: Temperature: 28.20 C, Pressure: 3.97 Pa, Humidity: 42.67 %[0m
+[0;32mI (25107) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (25207) BME280: Temperature: 28.20 C, Pressure: 3.97 Pa, Humidity: 42.70 %[0m
+[0;32mI (25207) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (25307) BME280: Temperature: 28.20 C, Pressure: 3.97 Pa, Humidity: 42.71 %[0m
+[0;32mI (25307) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (25407) BME280: Temperature: 28.21 C, Pressure: 3.97 Pa, Humidity: 42.73 %[0m
+[0;32mI (25407) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (25507) BME280: Temperature: 28.21 C, Pressure: 3.97 Pa, Humidity: 42.74 %[0m
+[0;32mI (25507) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (25607) BME280: Temperature: 28.20 C, Pressure: 3.97 Pa, Humidity: 42.76 %[0m
+[0;32mI (25607) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (25707) BME280: Temperature: 28.21 C, Pressure: 3.97 Pa, Humidity: 42.78 %[0m
+[0;32mI (25707) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (25807) BME280: Temperature: 28.20 C, Pressure: 3.97 Pa, Humidity: 42.81 %[0m
+[0;32mI (25807) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (25907) BME280: Temperature: 28.21 C, Pressure: 3.97 Pa, Humidity: 42.83 %[0m
+[0;32mI (25907) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (26007) BME280: Temperature: 28.21 C, Pressure: 3.97 Pa, Humidity: 42.88 %[0m
+[0;32mI (26007) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (26107) BME280: Temperature: 28.20 C, Pressure: 3.97 Pa, Humidity: 42.90 %[0m
+[0;32mI (26107) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (26207) BME280: Temperature: 28.21 C, Pressure: 3.97 Pa, Humidity: 42.92 %[0m
+[0;32mI (26207) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (26307) BME280: Temperature: 28.20 C, Pressure: 3.97 Pa, Humidity: 42.95 %[0m
+[0;32mI (26307) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (26407) BME280: Temperature: 28.21 C, Pressure: 3.97 Pa, Humidity: 42.96 %[0m
+[0;32mI (26407) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (26507) BME280: Temperature: 28.21 C, Pressure: 3.97 Pa, Humidity: 42.94 %[0m
+[0;32mI (26507) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (26607) BME280: Temperature: 28.21 C, Pressure: 3.97 Pa, Humidity: 42.93 %[0m
+[0;32mI (26607) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (26707) BME280: Temperature: 28.21 C, Pressure: 3.97 Pa, Humidity: 42.88 %[0m
+[0;32mI (26707) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (26807) BME280: Temperature: 28.20 C, Pressure: 3.97 Pa, Humidity: 42.83 %[0m
+[0;32mI (26807) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (26907) BME280: Temperature: 28.21 C, Pressure: 3.97 Pa, Humidity: 42.81 %[0m
+[0;32mI (26907) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (27007) BME280: Temperature: 28.21 C, Pressure: 3.97 Pa, Humidity: 42.80 %[0m
+[0;32mI (27007) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (27107) BME280: Temperature: 28.21 C, Pressure: 3.97 Pa, Humidity: 42.75 %[0m
+[0;32mI (27107) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (27207) BME280: Temperature: 28.21 C, Pressure: 3.97 Pa, Humidity: 42.71 %[0m
+[0;32mI (27207) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (27307) BME280: Temperature: 28.21 C, Pressure: 3.97 Pa, Humidity: 42.70 %[0m
+[0;32mI (27307) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (27407) BME280: Temperature: 28.21 C, Pressure: 3.97 Pa, Humidity: 42.67 %[0m
+[0;32mI (27407) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (27507) BME280: Temperature: 28.21 C, Pressure: 3.97 Pa, Humidity: 42.67 %[0m
+[0;32mI (27507) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (27607) BME280: Temperature: 28.21 C, Pressure: 3.97 Pa, Humidity: 42.67 %[0m
+[0;32mI (27607) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (27707) BME280: Temperature: 28.21 C, Pressure: 3.97 Pa, Humidity: 42.71 %[0m
+[0;32mI (27707) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (27807) BME280: Temperature: 28.21 C, Pressure: 3.97 Pa, Humidity: 42.72 %[0m
+[0;32mI (27807) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (27907) BME280: Temperature: 28.21 C, Pressure: 3.97 Pa, Humidity: 42.74 %[0m
+[0;32mI (27907) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (28007) BME280: Temperature: 28.21 C, Pressure: 3.97 Pa, Humidity: 42.78 %[0m
+[0;32mI (28007) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (28107) BME280: Temperature: 28.21 C, Pressure: 3.97 Pa, Humidity: 42.81 %[0m
+[0;32mI (28107) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (28207) BME280: Temperature: 28.22 C, Pressure: 3.97 Pa, Humidity: 42.87 %[0m
+[0;32mI (28207) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (28307) BME280: Temperature: 28.21 C, Pressure: 3.97 Pa, Humidity: 42.93 %[0m
+[0;32mI (28307) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (28407) BME280: Temperature: 28.21 C, Pressure: 3.97 Pa, Humidity: 42.95 %[0m
+[0;32mI (28407) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (28507) BME280: Temperature: 28.22 C, Pressure: 3.97 Pa, Humidity: 43.03 %[0m
+[0;32mI (28507) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (28607) BME280: Temperature: 28.21 C, Pressure: 3.97 Pa, Humidity: 43.10 %[0m
+[0;32mI (28607) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (28707) BME280: Temperature: 28.22 C, Pressure: 3.97 Pa, Humidity: 43.12 %[0m
+[0;32mI (28707) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (28807) BME280: Temperature: 28.21 C, Pressure: 3.97 Pa, Humidity: 43.17 %[0m
+[0;32mI (28807) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (28907) BME280: Temperature: 28.22 C, Pressure: 3.97 Pa, Humidity: 43.21 %[0m
+[0;32mI (28907) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (29007) BME280: Temperature: 28.21 C, Pressure: 3.97 Pa, Humidity: 43.22 %[0m
+[0;32mI (29007) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (29107) BME280: Temperature: 28.21 C, Pressure: 3.97 Pa, Humidity: 43.21 %[0m
+[0;32mI (29107) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (29207) BME280: Temperature: 28.21 C, Pressure: 3.97 Pa, Humidity: 43.20 %[0m
+[0;32mI (29207) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (29307) BME280: Temperature: 28.21 C, Pressure: 3.97 Pa, Humidity: 43.20 %[0m
+[0;32mI (29307) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (29407) BME280: Temperature: 28.21 C, Pressure: 3.97 Pa, Humidity: 43.20 %[0m
+[0;32mI (29407) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (29507) BME280: Temperature: 28.21 C, Pressure: 3.97 Pa, Humidity: 43.20 %[0m
+[0;32mI (29507) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (29607) BME280: Temperature: 28.22 C, Pressure: 3.97 Pa, Humidity: 43.20 %[0m
+[0;32mI (29607) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (29707) BME280: Temperature: 28.21 C, Pressure: 3.97 Pa, Humidity: 43.20 %[0m
+[0;32mI (29707) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (29807) BME280: Temperature: 28.21 C, Pressure: 3.97 Pa, Humidity: 43.19 %[0m
+[0;32mI (29807) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (29907) BME280: Temperature: 28.22 C, Pressure: 3.97 Pa, Humidity: 43.20 %[0m
+[0;32mI (29907) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (30007) BME280: Temperature: 28.22 C, Pressure: 3.97 Pa, Humidity: 43.19 %[0m
+[0;32mI (30007) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (30107) BME280: Temperature: 28.22 C, Pressure: 3.97 Pa, Humidity: 43.19 %[0m
+[0;32mI (30107) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (30207) BME280: Temperature: 28.21 C, Pressure: 3.97 Pa, Humidity: 43.19 %[0m
+[0;32mI (30207) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (30307) BME280: Temperature: 28.22 C, Pressure: 3.97 Pa, Humidity: 43.16 %[0m
+[0;32mI (30307) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (30407) BME280: Temperature: 28.22 C, Pressure: 3.97 Pa, Humidity: 43.16 %[0m
+[0;32mI (30407) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (30507) BME280: Temperature: 28.22 C, Pressure: 3.97 Pa, Humidity: 43.16 %[0m
+[0;32mI (30507) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (30607) BME280: Temperature: 28.22 C, Pressure: 3.97 Pa, Humidity: 43.17 %[0m
+[0;32mI (30607) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (30707) BME280: Temperature: 28.21 C, Pressure: 3.97 Pa, Humidity: 43.16 %[0m
+[0;32mI (30707) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (30807) BME280: Temperature: 28.21 C, Pressure: 3.97 Pa, Humidity: 43.14 %[0m
+[0;32mI (30807) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (30907) BME280: Temperature: 28.21 C, Pressure: 3.97 Pa, Humidity: 43.17 %[0m
+[0;32mI (30907) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (31007) BME280: Temperature: 28.21 C, Pressure: 3.97 Pa, Humidity: 43.17 %[0m
+[0;32mI (31007) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (31107) BME280: Temperature: 28.22 C, Pressure: 3.97 Pa, Humidity: 43.19 %[0m
+[0;32mI (31107) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (31207) BME280: Temperature: 28.22 C, Pressure: 3.97 Pa, Humidity: 43.18 %[0m
+[0;32mI (31207) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (31307) BME280: Temperature: 28.22 C, Pressure: 3.97 Pa, Humidity: 43.19 %[0m
+[0;32mI (31307) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (31407) BME280: Temperature: 28.22 C, Pressure: 3.97 Pa, Humidity: 43.16 %[0m
+[0;32mI (31407) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (31507) BME280: Temperature: 28.21 C, Pressure: 3.97 Pa, Humidity: 43.10 %[0m
+[0;32mI (31507) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (31607) BME280: Temperature: 28.22 C, Pressure: 3.97 Pa, Humidity: 43.08 %[0m
+[0;32mI (31607) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (31707) BME280: Temperature: 28.21 C, Pressure: 3.97 Pa, Humidity: 43.02 %[0m
+[0;32mI (31707) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (31807) BME280: Temperature: 28.21 C, Pressure: 3.97 Pa, Humidity: 42.96 %[0m
+[0;32mI (31807) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (31907) BME280: Temperature: 28.21 C, Pressure: 3.97 Pa, Humidity: 42.89 %[0m
+[0;32mI (31907) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (32007) BME280: Temperature: 28.21 C, Pressure: 3.97 Pa, Humidity: 42.88 %[0m
+[0;32mI (32007) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (32107) BME280: Temperature: 28.21 C, Pressure: 3.97 Pa, Humidity: 42.82 %[0m
+[0;32mI (32107) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (32207) BME280: Temperature: 28.21 C, Pressure: 3.97 Pa, Humidity: 42.80 %[0m
+[0;32mI (32207) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (32307) BME280: Temperature: 28.21 C, Pressure: 3.97 Pa, Humidity: 42.82 %[0m
+[0;32mI (32307) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (32407) BME280: Temperature: 28.21 C, Pressure: 3.97 Pa, Humidity: 42.90 %[0m
+[0;32mI (32407) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (32507) BME280: Temperature: 28.22 C, Pressure: 3.97 Pa, Humidity: 42.97 %[0m
+[0;32mI (32507) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (32607) BME280: Temperature: 28.21 C, Pressure: 3.97 Pa, Humidity: 43.20 %[0m
+[0;32mI (32607) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (32707) BME280: Temperature: 28.22 C, Pressure: 3.97 Pa, Humidity: 43.94 %[0m
+[0;32mI (32707) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (32807) BME280: Temperature: 28.22 C, Pressure: 3.97 Pa, Humidity: 44.94 %[0m
+[0;32mI (32807) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (32907) BME280: Temperature: 28.24 C, Pressure: 3.97 Pa, Humidity: 46.03 %[0m
+[0;32mI (32907) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (33007) BME280: Temperature: 28.33 C, Pressure: 3.97 Pa, Humidity: 46.66 %[0m
+[0;32mI (33007) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (33107) BME280: Temperature: 28.48 C, Pressure: 3.97 Pa, Humidity: 47.06 %[0m
+[0;32mI (33107) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (33207) BME280: Temperature: 28.65 C, Pressure: 3.97 Pa, Humidity: 47.32 %[0m
+[0;32mI (33207) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (33307) BME280: Temperature: 28.84 C, Pressure: 3.97 Pa, Humidity: 47.48 %[0m
+[0;32mI (33307) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (33407) BME280: Temperature: 29.00 C, Pressure: 3.97 Pa, Humidity: 47.62 %[0m
+[0;32mI (33407) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (33507) BME280: Temperature: 29.15 C, Pressure: 3.97 Pa, Humidity: 47.73 %[0m
+[0;32mI (33507) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (33607) BME280: Temperature: 29.25 C, Pressure: 3.97 Pa, Humidity: 47.81 %[0m
+[0;32mI (33607) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (33707) BME280: Temperature: 29.36 C, Pressure: 3.97 Pa, Humidity: 47.90 %[0m
+[0;32mI (33707) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (33807) BME280: Temperature: 29.46 C, Pressure: 3.97 Pa, Humidity: 47.99 %[0m
+[0;32mI (33807) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (33907) BME280: Temperature: 29.54 C, Pressure: 3.97 Pa, Humidity: 48.09 %[0m
+[0;32mI (33907) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (34007) BME280: Temperature: 29.61 C, Pressure: 3.97 Pa, Humidity: 48.17 %[0m
+[0;32mI (34007) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (34107) BME280: Temperature: 29.67 C, Pressure: 3.97 Pa, Humidity: 48.26 %[0m
+[0;32mI (34107) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (34207) BME280: Temperature: 29.73 C, Pressure: 3.97 Pa, Humidity: 48.32 %[0m
+[0;32mI (34207) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (34307) BME280: Temperature: 29.78 C, Pressure: 3.97 Pa, Humidity: 48.38 %[0m
+[0;32mI (34307) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (34407) BME280: Temperature: 29.82 C, Pressure: 3.97 Pa, Humidity: 48.49 %[0m
+[0;32mI (34407) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (34507) BME280: Temperature: 29.86 C, Pressure: 3.97 Pa, Humidity: 48.55 %[0m
+[0;32mI (34507) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (34607) BME280: Temperature: 29.90 C, Pressure: 3.97 Pa, Humidity: 48.63 %[0m
+[0;32mI (34607) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (34707) BME280: Temperature: 29.93 C, Pressure: 3.97 Pa, Humidity: 48.70 %[0m
+[0;32mI (34707) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (34807) BME280: Temperature: 29.96 C, Pressure: 3.97 Pa, Humidity: 48.77 %[0m
+[0;32mI (34807) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (34907) BME280: Temperature: 30.00 C, Pressure: 3.97 Pa, Humidity: 48.86 %[0m
+[0;32mI (34907) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (35007) BME280: Temperature: 30.02 C, Pressure: 3.97 Pa, Humidity: 48.93 %[0m
+[0;32mI (35007) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (35107) BME280: Temperature: 30.04 C, Pressure: 3.97 Pa, Humidity: 49.01 %[0m
+[0;32mI (35107) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (35207) BME280: Temperature: 30.07 C, Pressure: 3.97 Pa, Humidity: 49.08 %[0m
+[0;32mI (35207) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (35307) BME280: Temperature: 30.09 C, Pressure: 3.97 Pa, Humidity: 49.15 %[0m
+[0;32mI (35307) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (35407) BME280: Temperature: 30.12 C, Pressure: 3.97 Pa, Humidity: 49.25 %[0m
+[0;32mI (35407) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (35507) BME280: Temperature: 30.12 C, Pressure: 3.97 Pa, Humidity: 49.91 %[0m
+[0;32mI (35507) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (35607) BME280: Temperature: 30.09 C, Pressure: 3.97 Pa, Humidity: 50.06 %[0m
+[0;32mI (35607) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (35707) BME280: Temperature: 30.02 C, Pressure: 3.97 Pa, Humidity: 49.88 %[0m
+[0;32mI (35707) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (35807) BME280: Temperature: 29.92 C, Pressure: 3.97 Pa, Humidity: 49.54 %[0m
+[0;32mI (35807) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (35907) BME280: Temperature: 29.83 C, Pressure: 3.97 Pa, Humidity: 49.17 %[0m
+[0;32mI (35907) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (36007) BME280: Temperature: 29.73 C, Pressure: 3.97 Pa, Humidity: 48.82 %[0m
+[0;32mI (36007) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (36107) BME280: Temperature: 29.65 C, Pressure: 3.97 Pa, Humidity: 48.49 %[0m
+[0;32mI (36107) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (36207) BME280: Temperature: 29.57 C, Pressure: 3.97 Pa, Humidity: 48.14 %[0m
+[0;32mI (36207) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (36307) BME280: Temperature: 29.50 C, Pressure: 3.97 Pa, Humidity: 47.84 %[0m
+[0;32mI (36307) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (36407) BME280: Temperature: 29.43 C, Pressure: 3.97 Pa, Humidity: 47.52 %[0m
+[0;32mI (36407) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (36507) BME280: Temperature: 29.38 C, Pressure: 3.97 Pa, Humidity: 47.19 %[0m
+[0;32mI (36507) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (36607) BME280: Temperature: 29.33 C, Pressure: 3.97 Pa, Humidity: 46.84 %[0m
+[0;32mI (36607) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (36707) BME280: Temperature: 29.28 C, Pressure: 3.97 Pa, Humidity: 46.50 %[0m
+[0;32mI (36707) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (36807) BME280: Temperature: 29.25 C, Pressure: 3.97 Pa, Humidity: 46.22 %[0m
+[0;32mI (36807) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (36907) BME280: Temperature: 29.21 C, Pressure: 3.97 Pa, Humidity: 45.94 %[0m
+[0;32mI (36907) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (37007) BME280: Temperature: 29.19 C, Pressure: 3.97 Pa, Humidity: 45.73 %[0m
+[0;32mI (37007) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (37107) BME280: Temperature: 29.15 C, Pressure: 3.97 Pa, Humidity: 45.51 %[0m
+[0;32mI (37107) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (37207) BME280: Temperature: 29.13 C, Pressure: 3.97 Pa, Humidity: 45.31 %[0m
+[0;32mI (37207) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (37307) BME280: Temperature: 29.11 C, Pressure: 3.97 Pa, Humidity: 45.10 %[0m
+[0;32mI (37307) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (37407) BME280: Temperature: 29.08 C, Pressure: 3.97 Pa, Humidity: 44.93 %[0m
+[0;32mI (37407) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (37507) BME280: Temperature: 29.07 C, Pressure: 3.97 Pa, Humidity: 44.75 %[0m
+[0;32mI (37507) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (37607) BME280: Temperature: 29.05 C, Pressure: 3.97 Pa, Humidity: 44.57 %[0m
+[0;32mI (37607) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (37707) BME280: Temperature: 29.03 C, Pressure: 3.97 Pa, Humidity: 44.43 %[0m
+[0;32mI (37707) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (37807) BME280: Temperature: 29.01 C, Pressure: 3.97 Pa, Humidity: 44.28 %[0m
+[0;32mI (37807) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (37907) BME280: Temperature: 28.99 C, Pressure: 3.97 Pa, Humidity: 44.15 %[0m
+[0;32mI (37907) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (38007) BME280: Temperature: 28.98 C, Pressure: 3.97 Pa, Humidity: 44.00 %[0m
+[0;32mI (38007) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (38107) BME280: Temperature: 28.97 C, Pressure: 3.97 Pa, Humidity: 43.88 %[0m
+[0;32mI (38107) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (38207) BME280: Temperature: 28.96 C, Pressure: 3.97 Pa, Humidity: 43.79 %[0m
+[0;32mI (38207) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (38307) BME280: Temperature: 28.95 C, Pressure: 3.97 Pa, Humidity: 43.71 %[0m
+[0;32mI (38307) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (38407) BME280: Temperature: 28.94 C, Pressure: 3.97 Pa, Humidity: 43.60 %[0m
+[0;32mI (38407) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (38507) BME280: Temperature: 28.93 C, Pressure: 3.97 Pa, Humidity: 43.53 %[0m
+[0;32mI (38507) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (38607) BME280: Temperature: 28.92 C, Pressure: 3.97 Pa, Humidity: 43.46 %[0m
+[0;32mI (38607) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (38707) BME280: Temperature: 28.91 C, Pressure: 3.97 Pa, Humidity: 43.42 %[0m
+[0;32mI (38707) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (38807) BME280: Temperature: 28.90 C, Pressure: 3.97 Pa, Humidity: 43.34 %[0m
+[0;32mI (38807) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (38907) BME280: Temperature: 28.90 C, Pressure: 3.97 Pa, Humidity: 43.28 %[0m
+[0;32mI (38907) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (39007) BME280: Temperature: 28.89 C, Pressure: 3.97 Pa, Humidity: 43.24 %[0m
+[0;32mI (39007) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (39107) BME280: Temperature: 28.88 C, Pressure: 3.97 Pa, Humidity: 43.20 %[0m
+[0;32mI (39107) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (39207) BME280: Temperature: 28.87 C, Pressure: 3.97 Pa, Humidity: 43.14 %[0m
+[0;32mI (39207) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (39307) BME280: Temperature: 28.87 C, Pressure: 3.97 Pa, Humidity: 43.09 %[0m
+[0;32mI (39307) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (39407) BME280: Temperature: 28.86 C, Pressure: 3.97 Pa, Humidity: 43.09 %[0m
+[0;32mI (39407) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (39507) BME280: Temperature: 28.86 C, Pressure: 3.97 Pa, Humidity: 43.06 %[0m
+[0;32mI (39507) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (39607) BME280: Temperature: 28.85 C, Pressure: 3.97 Pa, Humidity: 43.01 %[0m
+[0;32mI (39607) MQTT: Sending data to MQTT broker...[0m
