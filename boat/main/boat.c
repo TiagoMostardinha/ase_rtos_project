@@ -149,7 +149,7 @@ void app_main(void)
         else if (strcmp(topic_boat, "boatoff") == 0){
             sdcard_unmount(&reader);
             sdcard_free(&reader);
-            return 0;
+            return;
         }
 
         /*Motor control*/
