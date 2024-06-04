@@ -29,7 +29,7 @@ services:
     depends_on:
       - influxdb
       - mosquitto
-    entrypoint: ["telegraf", "--config", "http://influxdb:8086/api/v2/telegrafs/0d2467c12f130000"]
+    entrypoint: ["telegraf", "--config", "http://influxdb:8086/api/v2/telegrafs/0d24b387e5999000"]
 
   grafana:
     image: grafana/grafana-oss:latest
