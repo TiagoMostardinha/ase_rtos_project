@@ -1,14 +1,21 @@
 version: "3"
 
 services:
+  mosquitto:
+    container_name: mosquitto
+    image: eclipse-mosquitto:2
+    ports:
+      - 1883
+      - 9001
+    volumes:
+      - ./mosquitto/config:/mosquitto/config
   influxdb:
     image: influxdb:latest
-    
     volumes:
       - influxdb-storage:/var/lib/influxdb2:rw
     env_file:
       - .env
-    entrypoint: ["./entrypoint.sh"]
+    entrypoint: [ "./entrypoint.sh" ]
     restart: on-failure:10
     ports:
       - ${DOCKER_INFLUXDB_INIT_PORT}:8086
@@ -21,7 +28,7 @@ services:
       - .env
     depends_on:
       - influxdb
-    entrypoint: ["telegraf","--config", "http://influxdb:8086/api/v2/telegrafs/0d2442accf4f8000"]
+    entrypoint: ["telegraf", "--config", "http://influxdb:8086/api/v2/telegrafs/0d2460dc5a6f9000"]
 
   grafana:
     image: grafana/grafana-oss:latest
