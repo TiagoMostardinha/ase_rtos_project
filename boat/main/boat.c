@@ -146,6 +146,11 @@ void app_main(void)
         {
             boat.servo_direction = 2;
         }
+        else if (strcmp(topic_boat, "boatoff") == 0){
+            sdcard_unmount(&reader);
+            sdcard_free(&reader);
+            return 0;
+        }
 
         /*Motor control*/
         if (boat.turn_motor)
