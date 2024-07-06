@@ -335,7 +335,7 @@ Mbed TLS_IS_TOP_LEVEL:STATIC=OFF
 Mbed TLS_SOURCE_DIR:STATIC=/home/tiago/esp/esp-idf/components/mbedtls/mbedtls
 
 //No help, variable specified on the command line.
-PYTHON:UNINITIALIZED=/home/tiago/.espressif/python_env/idf5.2_py3.12_env/bin/python
+PYTHON:UNINITIALIZED=/home/tiago/.espressif/python_env/idf5.2_py3.10_env/bin/python
 
 //No help, variable specified on the command line.
 PYTHON_DEPS_CHECKED:UNINITIALIZED=1
@@ -576,9 +576,9 @@ CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
 //Test C_COMPILER_SUPPORTS_WFORMAT_SIGNEDNESS
 C_COMPILER_SUPPORTS_WFORMAT_SIGNEDNESS:INTERNAL=1
 //Details about finding Git
-FIND_PACKAGE_MESSAGE_DETAILS_Git:INTERNAL=[/usr/bin/git][v2.45.1()]
+FIND_PACKAGE_MESSAGE_DETAILS_Git:INTERNAL=[/usr/bin/git][v2.45.2()]
 //Details about finding Python3
-FIND_PACKAGE_MESSAGE_DETAILS_Python3:INTERNAL=[/home/tiago/.espressif/python_env/idf5.2_py3.12_env/bin/python][cfound components: Interpreter ][v3.12.3()]
+FIND_PACKAGE_MESSAGE_DETAILS_Python3:INTERNAL=[/home/tiago/.espressif/python_env/idf5.2_py3.10_env/bin/python][cfound components: Interpreter ][v3.10.14()]
 //ADVANCED property for variable: GIT_EXECUTABLE
 GIT_EXECUTABLE-ADVANCED:INTERNAL=1
 //Have include stddef.h
@@ -597,10 +597,10 @@ _GNUInstallDirs_LAST_CMAKE_INSTALL_PREFIX:INTERNAL=/usr/local
 _Python3_Compiler_REASON_FAILURE:INTERNAL=
 //Development reason failure
 _Python3_Development_REASON_FAILURE:INTERNAL=
-_Python3_EXECUTABLE:INTERNAL=/home/tiago/.espressif/python_env/idf5.2_py3.12_env/bin/python
+_Python3_EXECUTABLE:INTERNAL=/home/tiago/.espressif/python_env/idf5.2_py3.10_env/bin/python
 //Python3 Properties
-_Python3_INTERPRETER_PROPERTIES:INTERNAL=Python;3;12;3;32;64;;;abi3;/usr/lib64/python3.12;/home/tiago/.espressif/python_env/idf5.2_py3.12_env/lib64/python3.12;/home/tiago/.espressif/python_env/idf5.2_py3.12_env/lib/python3.12/site-packages;/home/tiago/.espressif/python_env/idf5.2_py3.12_env/lib64/python3.12/site-packages
-_Python3_INTERPRETER_SIGNATURE:INTERNAL=2c38b6087fc3b5c0f5322fd8b4aa88ce
+_Python3_INTERPRETER_PROPERTIES:INTERNAL=Python;3;10;14;32;64;;;abi3;/usr/lib64/python3.10;/home/tiago/.espressif/python_env/idf5.2_py3.10_env/lib64/python3.10;/home/tiago/.espressif/python_env/idf5.2_py3.10_env/lib/python3.10/site-packages;/home/tiago/.espressif/python_env/idf5.2_py3.10_env/lib64/python3.10/site-packages
+_Python3_INTERPRETER_SIGNATURE:INTERNAL=1f9ffc2f48d896e66856de0c4a4057dc
 //NumPy reason failure
 _Python3_NumPy_REASON_FAILURE:INTERNAL=
 

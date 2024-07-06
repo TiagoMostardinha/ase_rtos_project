@@ -1,7 +1,9 @@
 #pragma once
 
 #define BOATIN "boat/in"
-#define BOATOUT "boat/out"
+#define BOATTEMP "boat/temp"
+#define BOATPRES "boat/pres"
+#define BOATHUM "boat/hum"
 #define BOATFILE "boat/file"
 
 void mqtt_init();

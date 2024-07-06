@@ -181,10 +181,18 @@ void app_main(void)
         {
             ESP_LOGI("MQTT", "Sending data to MQTT broker...");
             // TODO: Send data to MQTT broker
-            char line[MAX_CHAR_SIZE];
+            char temp[MAX_CHAR_SIZE];
+            char pres[MAX_CHAR_SIZE];
+            char hum[MAX_CHAR_SIZE];
 
-            snprintf(line, MAX_CHAR_SIZE, "temperature,%.2f,pressure,%.2f,humidity,%.2f", data.temperature, data.pressure, data.humidity);
-            mqtt_publish(BOATOUT, line);
+            snprintf(temp, MAX_CHAR_SIZE, "%.2f",data.temperature);
+            snprintf(pres, MAX_CHAR_SIZE, "%.2f",data.pressure);
+            snprintf(hum, MAX_CHAR_SIZE, "%.2f",data.humidity);
+
+
+            mqtt_publish(BOATTEMP, temp);
+            mqtt_publish(BOATHUM, hum);
+            mqtt_publish(BOATPRES, pres);
         }
         else
         {

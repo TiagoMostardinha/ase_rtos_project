@@ -2,17 +2,31 @@ import paho.mqtt.client as mqtt
 import threading
 import time
 
+sendfile = False
 
 def on_connect(client, userdata, flags, rc, properties):
     print("Connected with result code "+str(rc))
     client.subscribe("boat/file")
 
 def on_message(client, userdata, msg):
-    if message == "START":
+    global sendfile
+
+    message = msg.payload.decode('utf-8')
+
+    if message == "END":
+        sendfile = False
+        client.publish("boat/in", " ")
+
+    
+    if sendfile:
         with open('data.txt', 'a') as file:
-            while message != "END":
-                message = msg.payload.decode('utf-8')
-                file.write(message)
+            file.write(message+"\n")
+    
+    if message == "START":
+        sendfile = True
+        
+    
+
         
             
 
@@ -20,7 +34,7 @@ def main():
     client = mqtt.Client(mqtt.CallbackAPIVersion.VERSION2)
     client.on_connect = on_connect
     client.on_message = on_message
-    client.connect("localhost", 1883, 60)
+    client.connect("172.30.0.2", 1883, 60)
     threading.Thread(target=client.loop_forever).start()
 
     realtime = False
