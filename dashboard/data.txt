@@ -1,0 +1,12 @@
+temperature: 23.68 pressure: 3.98 humidity: 51.16 
+temperature: 23.68 pressure: 3.98 humidity: 51.18 
+temperature: 24.03 pressure: 3.98 humidity: 51.68 
+temperature: 24.02 pressure: 3.98 humidity: 51.57 
+temperature: 24.01 pressure: 3.98 humidity: 51.47 
+temperature: 24.00 pressure: 3.98 humidity: 51.39 
+temperature: 23.99 pressure: 3.98 humidity: 51.34 
+temperature: 23.98 pressure: 3.98 humidity: 51.27 
+temperature: 23.97 pressure: 3.98 humidity: 51.24 
+temperature: 23.97 pressure: 3.98 humidity: 51.21 
+temperature: 23.97 pressure: 3.98 humidity: 51.16 
+temperature: 23.97 pressure: 3.98 humidity: 51.15 

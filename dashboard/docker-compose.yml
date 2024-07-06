@@ -9,37 +9,25 @@ services:
       - 9001
     volumes:
       - ./mosquitto/config:/mosquitto/config
+
   influxdb:
-    image: influxdb:latest
-    volumes:
-      - influxdb-storage:/var/lib/influxdb2:rw
+    image: influxdb:2.6-alpine
     env_file:
-      - .env
-    entrypoint: [ "./entrypoint.sh" ]
-    restart: on-failure:10
+      - influxv2.env
+    volumes:
+      # Mount for influxdb data directory and configuration
+      - influxdbv2:/var/lib/influxdb2:rw
     ports:
-      - ${DOCKER_INFLUXDB_INIT_PORT}:8086
-
+      - "8086:8086"
   telegraf:
-    image: telegraf:latest
+    image: telegraf:1.25-alpine
+    depends_on:
+      - influxdb
     volumes:
-      - ${TELEGRAF_CFG_PATH}:/etc/telegraf/telegraf.conf:rw
+      # Mount for telegraf config
+      - ./telegraf/mytelegraf.conf:/etc/telegraf/telegraf.conf:ro
     env_file:
-      - .env
-    depends_on:
-      - influxdb
-      - mosquitto
-    entrypoint: ["telegraf", "--config", "http://influxdb:8086/api/v2/telegrafs/0d24b387e5999000"]
-
-  grafana:
-    image: grafana/grafana-oss:latest
-    volumes:
-      - grafana-storage:/var/lib/grafana:rw
-    depends_on:
-      - influxdb
-    ports:
-      - ${GRAFANA_PORT}:3000
+      - influxv2.env
 
 volumes:
-  grafana-storage:
-  influxdb-storage:
+  influxdbv2:

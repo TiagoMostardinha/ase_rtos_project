@@ -1,0 +1,375 @@
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x1 (POWERON),boot:0xf (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x1738
+load:0x403cc710,len:0xb9c
+load:0x403ce710,len:0x2e40
+entry 0x403cc71a
+[0;32mI (30) boot: ESP-IDF v5.2.1-dirty 2nd stage bootloader[0m
+[0;32mI (30) boot: compile time Jul  6 2024 17:46:36[0m
+[0;32mI (30) boot: chip revision: v0.3[0m
+[0;32mI (34) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (39) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (43) boot.esp32c3: SPI Flash Size : 2MB[0m
+[0;32mI (48) boot: Enabling RNG early entropy source...[0m
+[0;32mI (53) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (64) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (72) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (79) boot:  2 factory          factory app      00 00 00010000 00177000[0m
+[0;32mI (87) boot: End of partition table[0m
+[0;32mI (91) esp_image: segment 0: paddr=00010020 vaddr=3c0c0020 size=2abc0h (175040) map[0m
+[0;32mI (127) esp_image: segment 1: paddr=0003abe8 vaddr=3fc93e00 size=02f98h ( 12184) load[0m
+[0;32mI (129) esp_image: segment 2: paddr=0003db88 vaddr=40380000 size=02490h (  9360) load[0m
+[0;32mI (134) esp_image: segment 3: paddr=00040020 vaddr=42000020 size=bfdech (785900) map[0m
+[0;32mI (264) esp_image: segment 4: paddr=000ffe14 vaddr=40382490 size=117d8h ( 71640) load[0m
+[0;32mI (283) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (284) boot: Disabling RNG early entropy source...[0m
+[0;32mI (295) cpu_start: Unicore app[0m
+[0;32mI (304) cpu_start: Pro cpu start user code[0m
+[0;32mI (304) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (304) cpu_start: Application information:[0m
+[0;32mI (307) cpu_start: Project name:     boat[0m
+[0;32mI (311) cpu_start: App version:      470b575-dirty[0m
+[0;32mI (317) cpu_start: Compile time:     Jul  6 2024 17:46:17[0m
+[0;32mI (323) cpu_start: ELF file SHA256:  59378d5f8...[0m
+[0;32mI (328) cpu_start: ESP-IDF:          v5.2.1-dirty[0m
+[0;32mI (334) cpu_start: Min chip rev:     v0.3[0m
+[0;32mI (338) cpu_start: Max chip rev:     v1.99 [0m
+[0;32mI (343) cpu_start: Chip rev:         v0.3[0m
+[0;32mI (348) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (355) heap_init: At 3FC9B6B0 len 00024950 (146 KiB): RAM[0m
+[0;32mI (361) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (368) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (375) heap_init: At 50000010 len 00001FD8 (7 KiB): RTCRAM[0m
+[0;32mI (383) spi_flash: detected chip: generic[0m
+[0;32mI (386) spi_flash: flash io: dio[0m
+[0;33mW (390) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (404) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (410) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (417) main_task: Started on CPU0[0m
+[0;32mI (417) main_task: Calling app_main()[0m
+[0;32mI (417) BME280: Starting BME280...[0m
+[0;32mI (437) pp: pp rom version: 9387209[0m
+[0;32mI (437) net80211: net80211 rom version: 9387209[0m
+I (447) wifi:wifi driver task: 3fca4260, prio:23, stack:6656, core=0
+I (447) wifi:wifi firmware version: a9f5b59
+I (447) wifi:wifi certification version: v7.0
+I (447) wifi:config NVS flash: enabled
+I (447) wifi:config nano formating: disabled
+I (457) wifi:Init data frame dynamic rx buffer num: 32
+I (457) wifi:Init static rx mgmt buffer num: 5
+I (467) wifi:Init management short buffer num: 32
+I (467) wifi:Init dynamic tx buffer num: 32
+I (477) wifi:Init static tx FG buffer num: 2
+I (477) wifi:Init static rx buffer size: 1600
+I (477) wifi:Init static rx buffer num: 10
+I (487) wifi:Init dynamic rx buffer num: 32
+[0;32mI (487) wifi_init: rx ba win: 6[0m
+[0;32mI (497) wifi_init: tcpip mbox: 32[0m
+[0;32mI (497) wifi_init: udp mbox: 6[0m
+[0;32mI (497) wifi_init: tcp mbox: 6[0m
+[0;32mI (507) wifi_init: tcp tx win: 5760[0m
+[0;32mI (507) wifi_init: tcp rx win: 5760[0m
+[0;32mI (507) wifi_init: tcp mss: 1440[0m
+[0;32mI (517) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (517) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (527) phy_init: phy_version 1150,7c3c08f,Jan 24 2024,17:32:21[0m
+I (567) wifi:mode : sta (68:67:25:e8:3e:24)
+I (567) wifi:enable tsf
+[0;32mI (567) wifi station: wifi_init_sta finished.[0m
+I (577) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1
+I (577) wifi:state: init -> auth (b0)
+I (607) wifi:state: auth -> assoc (0)
+I (617) wifi:state: assoc -> run (10)
+I (627) wifi:connected with fedora40, aid = 1, channel 11, BW20, bssid = ae:04:78:e8:ff:28
+I (627) wifi:security: WPA2-PSK, phy: bgn, rssi: -49
+I (627) wifi:pm start, type: 1
+
+I (637) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us
+I (637) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000
+I (657) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us
+I (657) wifi:AP's beacon interval = 102400 us, DTIM period = 2
+[0;32mI (1647) esp_netif_handlers: sta ip: 10.42.0.40, mask: 255.255.255.0, gw: 10.42.0.1[0m
+[0;32mI (1647) wifi station: got ip:10.42.0.40[0m
+[0;32mI (1647) wifi station: connected to ap SSID:fedora40 password:fedora40[0m
+[0;32mI (1657) MQTT: Other event id:7[0m
+[0;32mI (1657) BME280: Initializing BME280...[0m
+[0;32mI (1657) gpio: GPIO[3]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (1667) gpio: GPIO[2]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (1677) MQTT: MQTT_EVENT_CONNECTED[0m
+[0;32mI (1687) MQTT: sent subscribe successful, msg_id=17369[0m
+[0;32mI (1687) MQTT: sent subscribe successful, msg_id=15570[0m
+[0;32mI (1697) MQTT: MQTT_EVENT_SUBSCRIBED, msg_id=17369[0m
+[0;32mI (1707) MQTT: MQTT_EVENT_SUBSCRIBED, msg_id=15570[0m
+[0;32mI (1707) BME280: Setting BME280 sensor...[0m
+[0;32mI (1707) BME280: Getting BME280 calibration data...[0m
+[0;32mI (1817) BME280: Setting BME280 in normal mode...[0m
+[0;32mI (1817) SDSPI: Initializing SD card...[0m
+[0;32mI (1817) SDSPI: Mounting SD card...[0m
+[0;32mI (1817) gpio: GPIO[1]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (1827) sdspi_transaction: cmd=52, R1 response: command not supported[0m
+[0;32mI (1877) sdspi_transaction: cmd=5, R1 response: command not supported[0m
+Name: APPSD
+Type: SDHC/SDXC
+Speed: 20.00 MHz (limit: 20.00 MHz)
+Size: 256001MB
+CSD: ver=2, sector_size=512, capacity=524290048 read_bl_len=9
+SSR: bus_width=1
+[0;32mI (2907) BME280: Temperature: 24.47 C, Pressure: 3.82 Pa, Humidity: 52.65 %[0m
+[0;32mI (2907) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (3907) BME280: Temperature: 24.48 C, Pressure: 3.98 Pa, Humidity: 52.63 %[0m
+[0;32mI (3907) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (4907) BME280: Temperature: 24.48 C, Pressure: 3.98 Pa, Humidity: 52.56 %[0m
+[0;32mI (4907) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (5907) BME280: Temperature: 24.47 C, Pressure: 3.98 Pa, Humidity: 52.49 %[0m
+[0;32mI (5907) MQTT: Sending data to MQTT broker...[0m
+I (5907) wifi:<ba-add>idx:0 (ifx:0, ae:04:78:e8:ff:28), tid:0, ssn:16, winSize:64
+[0;32mI (6907) BME280: Temperature: 24.48 C, Pressure: 3.98 Pa, Humidity: 52.39 %[0m
+[0;32mI (6907) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (7907) BME280: Temperature: 24.47 C, Pressure: 3.98 Pa, Humidity: 52.37 %[0m
+[0;32mI (7907) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (8907) BME280: Temperature: 24.48 C, Pressure: 3.97 Pa, Humidity: 52.38 %[0m
+[0;32mI (8907) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (9907) BME280: Temperature: 24.48 C, Pressure: 3.98 Pa, Humidity: 52.46 %[0m
+[0;32mI (9907) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (10907) BME280: Temperature: 24.47 C, Pressure: 3.98 Pa, Humidity: 52.47 %[0m
+[0;32mI (10907) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (11907) BME280: Temperature: 24.48 C, Pressure: 3.97 Pa, Humidity: 52.44 %[0m
+[0;32mI (11907) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (12907) BME280: Temperature: 24.47 C, Pressure: 3.98 Pa, Humidity: 52.46 %[0m
+[0;32mI (12907) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (13907) BME280: Temperature: 24.48 C, Pressure: 3.98 Pa, Humidity: 52.47 %[0m
+[0;32mI (13907) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (14907) BME280: Temperature: 24.48 C, Pressure: 3.98 Pa, Humidity: 52.47 %[0m
+[0;32mI (14907) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (15907) BME280: Temperature: 24.48 C, Pressure: 3.98 Pa, Humidity: 52.48 %[0m
+[0;32mI (15907) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (16907) BME280: Temperature: 24.48 C, Pressure: 3.98 Pa, Humidity: 52.47 %[0m
+[0;32mI (16907) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (17907) BME280: Temperature: 24.48 C, Pressure: 3.98 Pa, Humidity: 52.50 %[0m
+[0;32mI (17907) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (18907) BME280: Temperature: 24.48 C, Pressure: 3.98 Pa, Humidity: 52.54 %[0m
+[0;32mI (18907) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (19907) BME280: Temperature: 24.48 C, Pressure: 3.98 Pa, Humidity: 52.60 %[0m
+[0;32mI (19907) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (20907) BME280: Temperature: 24.48 C, Pressure: 3.98 Pa, Humidity: 52.60 %[0m
+[0;32mI (20907) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (21907) BME280: Temperature: 24.48 C, Pressure: 3.98 Pa, Humidity: 52.62 %[0m
+[0;32mI (21907) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (22917) BME280: Temperature: 24.48 C, Pressure: 3.98 Pa, Humidity: 52.60 %[0m
+[0;32mI (22917) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (23927) BME280: Temperature: 24.48 C, Pressure: 3.98 Pa, Humidity: 52.60 %[0m
+[0;32mI (23927) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (24927) BME280: Temperature: 24.48 C, Pressure: 3.98 Pa, Humidity: 52.60 %[0m
+[0;32mI (24927) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (25927) BME280: Temperature: 24.48 C, Pressure: 3.98 Pa, Humidity: 52.59 %[0m
+[0;32mI (25927) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (26927) BME280: Temperature: 24.49 C, Pressure: 3.98 Pa, Humidity: 52.56 %[0m
+[0;32mI (26927) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (27927) BME280: Temperature: 24.48 C, Pressure: 3.98 Pa, Humidity: 52.59 %[0m
+[0;32mI (27927) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (28927) BME280: Temperature: 24.49 C, Pressure: 3.98 Pa, Humidity: 52.56 %[0m
+[0;32mI (28927) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (29927) BME280: Temperature: 24.48 C, Pressure: 3.98 Pa, Humidity: 52.51 %[0m
+[0;32mI (29927) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (30927) BME280: Temperature: 24.48 C, Pressure: 3.98 Pa, Humidity: 52.44 %[0m
+[0;32mI (30927) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (31927) BME280: Temperature: 24.48 C, Pressure: 3.98 Pa, Humidity: 52.43 %[0m
+[0;32mI (31927) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (32927) BME280: Temperature: 24.49 C, Pressure: 3.98 Pa, Humidity: 52.42 %[0m
+[0;32mI (32927) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (33927) BME280: Temperature: 24.48 C, Pressure: 3.98 Pa, Humidity: 52.45 %[0m
+[0;32mI (33927) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (34927) BME280: Temperature: 24.48 C, Pressure: 3.98 Pa, Humidity: 52.47 %[0m
+[0;32mI (34927) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (35927) BME280: Temperature: 24.49 C, Pressure: 3.98 Pa, Humidity: 52.52 %[0m
+[0;32mI (35927) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (36927) BME280: Temperature: 24.49 C, Pressure: 3.98 Pa, Humidity: 52.51 %[0m
+[0;32mI (36927) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (37927) BME280: Temperature: 24.51 C, Pressure: 3.98 Pa, Humidity: 53.01 %[0m
+[0;32mI (37927) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (38927) BME280: Temperature: 24.51 C, Pressure: 3.98 Pa, Humidity: 53.32 %[0m
+[0;32mI (38927) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (39927) BME280: Temperature: 24.62 C, Pressure: 3.97 Pa, Humidity: 58.75 %[0m
+[0;32mI (39927) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (40927) BME280: Temperature: 25.25 C, Pressure: 3.97 Pa, Humidity: 74.60 %[0m
+[0;32mI (40927) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (41927) BME280: Temperature: 25.11 C, Pressure: 3.98 Pa, Humidity: 78.41 %[0m
+[0;32mI (41927) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (42927) BME280: Temperature: 26.12 C, Pressure: 3.97 Pa, Humidity: 83.96 %[0m
+[0;32mI (42927) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (43927) BME280: Temperature: 25.81 C, Pressure: 3.98 Pa, Humidity: 84.29 %[0m
+[0;32mI (43927) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (44927) BME280: Temperature: 26.22 C, Pressure: 3.97 Pa, Humidity: 86.27 %[0m
+[0;32mI (44927) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (45927) BME280: Temperature: 25.88 C, Pressure: 3.98 Pa, Humidity: 85.21 %[0m
+[0;32mI (45927) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (46927) BME280: Temperature: 26.81 C, Pressure: 3.97 Pa, Humidity: 87.29 %[0m
+[0;32mI (46927) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (47927) BME280: Temperature: 27.50 C, Pressure: 3.97 Pa, Humidity: 88.88 %[0m
+[0;32mI (47927) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (48927) BME280: Temperature: 27.32 C, Pressure: 3.98 Pa, Humidity: 88.17 %[0m
+[0;32mI (48927) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (49927) BME280: Temperature: 28.11 C, Pressure: 3.97 Pa, Humidity: 88.43 %[0m
+[0;32mI (49927) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (50927) BME280: Temperature: 28.52 C, Pressure: 3.97 Pa, Humidity: 88.37 %[0m
+[0;32mI (50927) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (51927) BME280: Temperature: 28.76 C, Pressure: 3.97 Pa, Humidity: 88.39 %[0m
+[0;32mI (51927) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (52927) BME280: Temperature: 28.92 C, Pressure: 3.97 Pa, Humidity: 87.91 %[0m
+[0;32mI (52927) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (53927) BME280: Temperature: 29.04 C, Pressure: 3.97 Pa, Humidity: 87.14 %[0m
+[0;32mI (53927) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (54927) BME280: Temperature: 28.43 C, Pressure: 3.98 Pa, Humidity: 84.35 %[0m
+[0;32mI (54927) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (55927) BME280: Temperature: 27.90 C, Pressure: 3.98 Pa, Humidity: 82.28 %[0m
+[0;32mI (55927) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (56927) BME280: Temperature: 27.59 C, Pressure: 3.98 Pa, Humidity: 80.79 %[0m
+[0;32mI (56927) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (57927) BME280: Temperature: 27.34 C, Pressure: 3.98 Pa, Humidity: 78.99 %[0m
+[0;32mI (57927) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (58927) BME280: Temperature: 27.11 C, Pressure: 3.98 Pa, Humidity: 76.28 %[0m
+[0;32mI (58927) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (59927) BME280: Temperature: 26.91 C, Pressure: 3.98 Pa, Humidity: 73.56 %[0m
+[0;32mI (59927) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (60927) BME280: Temperature: 26.77 C, Pressure: 3.98 Pa, Humidity: 72.91 %[0m
+[0;32mI (60927) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (61927) BME280: Temperature: 26.69 C, Pressure: 3.98 Pa, Humidity: 74.03 %[0m
+[0;32mI (61927) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (62927) BME280: Temperature: 26.62 C, Pressure: 3.98 Pa, Humidity: 75.37 %[0m
+[0;32mI (62927) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (63927) BME280: Temperature: 26.49 C, Pressure: 3.98 Pa, Humidity: 73.96 %[0m
+[0;32mI (63927) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (64927) BME280: Temperature: 26.38 C, Pressure: 3.98 Pa, Humidity: 72.26 %[0m
+[0;32mI (64927) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (65927) BME280: Temperature: 26.31 C, Pressure: 3.98 Pa, Humidity: 71.55 %[0m
+[0;32mI (65927) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (66927) BME280: Temperature: 26.26 C, Pressure: 3.98 Pa, Humidity: 71.11 %[0m
+[0;32mI (66927) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (67927) BME280: Temperature: 26.19 C, Pressure: 3.98 Pa, Humidity: 69.69 %[0m
+[0;32mI (67927) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (68927) BME280: Temperature: 26.14 C, Pressure: 3.98 Pa, Humidity: 68.08 %[0m
+[0;32mI (68927) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (69927) BME280: Temperature: 26.07 C, Pressure: 3.98 Pa, Humidity: 66.33 %[0m
+[0;32mI (69927) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (70927) BME280: Temperature: 26.03 C, Pressure: 3.98 Pa, Humidity: 64.60 %[0m
+[0;32mI (70927) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (71927) BME280: Temperature: 26.00 C, Pressure: 3.98 Pa, Humidity: 63.23 %[0m
+[0;32mI (71927) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (72927) BME280: Temperature: 25.96 C, Pressure: 3.98 Pa, Humidity: 62.18 %[0m
+[0;32mI (72927) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (73927) BME280: Temperature: 25.93 C, Pressure: 3.98 Pa, Humidity: 61.99 %[0m
+[0;32mI (73927) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (74797) MQTT: MQTT_EVENT_DATA[0m
+TOPIC=boat/in
+DATA=realtime
+[0;32mI (74927) BME280: Temperature: 25.90 C, Pressure: 3.98 Pa, Humidity: 61.74 %[0m
+[0;32mI (74927) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (75927) BME280: Temperature: 25.86 C, Pressure: 3.98 Pa, Humidity: 60.98 %[0m
+[0;32mI (75927) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (76927) BME280: Temperature: 25.83 C, Pressure: 3.98 Pa, Humidity: 60.27 %[0m
+[0;32mI (76927) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (77927) BME280: Temperature: 25.81 C, Pressure: 3.98 Pa, Humidity: 59.51 %[0m
+[0;32mI (77927) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (78927) BME280: Temperature: 25.78 C, Pressure: 3.98 Pa, Humidity: 58.92 %[0m
+[0;32mI (78927) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (79927) BME280: Temperature: 25.76 C, Pressure: 3.98 Pa, Humidity: 58.44 %[0m
+[0;32mI (79927) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (80927) BME280: Temperature: 25.73 C, Pressure: 3.98 Pa, Humidity: 57.97 %[0m
+[0;32mI (80927) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (81927) BME280: Temperature: 25.71 C, Pressure: 3.98 Pa, Humidity: 57.77 %[0m
+[0;32mI (81927) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (82927) BME280: Temperature: 25.70 C, Pressure: 3.98 Pa, Humidity: 57.59 %[0m
+[0;32mI (82927) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (83927) BME280: Temperature: 25.67 C, Pressure: 3.98 Pa, Humidity: 57.11 %[0m
+[0;32mI (83927) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (84217) MQTT: MQTT_EVENT_DATA[0m
+TOPIC=boat/in
+DATA=realtime_off
+[0;32mI (84927) BME280: Temperature: 25.66 C, Pressure: 3.98 Pa, Humidity: 56.66 %[0m
+[0;32mI (84927) SDSPI: Writing data to file...[0m
+[0;32mI (85947) BME280: Temperature: 25.64 C, Pressure: 3.98 Pa, Humidity: 56.44 %[0m
+[0;32mI (85947) SDSPI: Writing data to file...[0m
+[0;32mI (86957) BME280: Temperature: 25.63 C, Pressure: 3.98 Pa, Humidity: 56.24 %[0m
+[0;32mI (86957) SDSPI: Writing data to file...[0m
+[0;32mI (87967) BME280: Temperature: 25.61 C, Pressure: 3.98 Pa, Humidity: 56.09 %[0m
+[0;32mI (87967) SDSPI: Writing data to file...[0m
+[0;32mI (88977) BME280: Temperature: 25.60 C, Pressure: 3.98 Pa, Humidity: 55.85 %[0m
+[0;32mI (88977) SDSPI: Writing data to file...[0m
+[0;32mI (89987) BME280: Temperature: 25.58 C, Pressure: 3.98 Pa, Humidity: 55.61 %[0m
+[0;32mI (89987) SDSPI: Writing data to file...[0m
+[0;32mI (90997) BME280: Temperature: 25.57 C, Pressure: 3.98 Pa, Humidity: 55.51 %[0m
+[0;32mI (90997) SDSPI: Writing data to file...[0m
+[0;32mI (92007) BME280: Temperature: 25.56 C, Pressure: 3.98 Pa, Humidity: 55.41 %[0m
+[0;32mI (92007) SDSPI: Writing data to file...[0m
+[0;32mI (93017) BME280: Temperature: 26.85 C, Pressure: 3.97 Pa, Humidity: 56.17 %[0m
+[0;32mI (93017) SDSPI: Writing data to file...[0m
+[0;32mI (94027) BME280: Temperature: 27.54 C, Pressure: 3.97 Pa, Humidity: 57.15 %[0m
+[0;32mI (94027) SDSPI: Writing data to file...[0m
+[0;32mI (95037) BME280: Temperature: 27.81 C, Pressure: 3.97 Pa, Humidity: 58.05 %[0m
+[0;32mI (95037) SDSPI: Writing data to file...[0m
+[0;32mI (96047) BME280: Temperature: 27.98 C, Pressure: 3.97 Pa, Humidity: 58.78 %[0m
+[0;32mI (96047) SDSPI: Writing data to file...[0m
+[0;32mI (97057) BME280: Temperature: 28.09 C, Pressure: 3.97 Pa, Humidity: 59.35 %[0m
+[0;32mI (97057) SDSPI: Writing data to file...[0m
+[0;32mI (98067) BME280: Temperature: 28.18 C, Pressure: 3.97 Pa, Humidity: 59.83 %[0m
+[0;32mI (98067) SDSPI: Writing data to file...[0m
+[0;32mI (99077) BME280: Temperature: 27.78 C, Pressure: 3.98 Pa, Humidity: 59.86 %[0m
+[0;32mI (99077) SDSPI: Writing data to file...[0m
+[0;32mI (100087) BME280: Temperature: 27.04 C, Pressure: 3.98 Pa, Humidity: 57.39 %[0m
+[0;32mI (100087) SDSPI: Writing data to file...[0m
+[0;32mI (101097) BME280: Temperature: 26.74 C, Pressure: 3.98 Pa, Humidity: 55.43 %[0m
+[0;32mI (101097) SDSPI: Writing data to file...[0m
+[0;32mI (102107) BME280: Temperature: 26.58 C, Pressure: 3.98 Pa, Humidity: 54.31 %[0m
+[0;32mI (102107) SDSPI: Writing data to file...[0m
+[0;32mI (103117) BME280: Temperature: 26.46 C, Pressure: 3.98 Pa, Humidity: 53.60 %[0m
+[0;32mI (103117) SDSPI: Writing data to file...[0m
+[0;31mE (103117) sdmmc_cmd: sdmmc_write_sectors_dma: sdmmc_send_cmd returned 0x108[0m
+[0;31mE (103127) diskio_sdmmc: sdmmc_write_blocks failed (264)[0m
+[0;32mI (104127) BME280: Temperature: 26.35 C, Pressure: 3.98 Pa, Humidity: 53.06 %[0m
+[0;32mI (104127) SDSPI: Writing data to file...[0m
+[0;31mE (104127) sdmmc_cmd: sdmmc_read_sectors_dma: sdmmc_send_cmd returned 0x107[0m
+[0;31mE (104137) diskio_sdmmc: sdmmc_read_blocks failed (263)[0m
+[0;31mE (104137) SDSPI: Failed to write to file. (ffffffff)[0m
+[0;32mI (104147) main_task: Returned from app_main()[0m
+[0;32mI (104287) MQTT: MQTT_EVENT_DATA[0m
+TOPIC=boat/in
+DATA=sendfile
+[0;32mI (138897) MQTT: MQTT_EVENT_DATA[0m
+TOPIC=boat/in
+DATA=boatoff
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x1 (POWERON),boot:0xf (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x1738
+load:0x403cc710,len:0xb9c
+load:0x403ce710,len:0x2e40
+entry 0x403cc71a
+[0;32mI (30) boot: ESP-IDF v5.2.1-dirty 2nd stage bootloader[0m
+[0;32mI (30) boot: compile time Jul  6 2024 17:46:36[0m
+[0;32mI (30) boot: chip revision: v0.3[0m
+[0;32mI (34) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (39) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (43) boot.esp32c3: SPI Flash Size : 2MB[0m
+[0;32mI (48) boot: Enabling RNG early entropy source...[0m
+[0;32mI (53) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (64) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (72) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (79) boot:  2 factory          factory app      00 00 00010000 00177000[0m
+[0;32mI (87) boot: End of partition table[0m
+[0;32mI (91) esp_image: segment 0: paddr=00010020 vaddr=3c0c0020 size=2abc0h (175040) map[0m
+[0;32mI (127) esp_image: segment 1: paddr=0003abe8 vaddr=3fc93e00 size=02f98h ( 12184) load[0m
+[0;32mI (129) esp_image: segment 2: paddr=0003db88 vaddr=40380000 size=02490h (  9360) load[0m
+[0;32mI (134) esp_image: segment 3: paddr=00040020 vaddr=42000020 size=bfdech (785900) map[0m
+[0;32mI (264) esp_image: segment 4: paddr=000ffe14 vaddr=40382490 size=117d8h ( 71640) load[0m
+[0;32mI (283) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (284) boot: Disabling RNG early entropy source...[0m
+[0;32mI (295) cpu_start: Unicore app[0m
+[0;32mI (304) cpu_start: Pro cpu start user code[0m
+[0;32mI (304) cpu_start: cpu freq: 160000000

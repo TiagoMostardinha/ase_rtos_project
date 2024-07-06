@@ -34,7 +34,7 @@ def main():
     client = mqtt.Client(mqtt.CallbackAPIVersion.VERSION2)
     client.on_connect = on_connect
     client.on_message = on_message
-    client.connect("172.30.0.2", 1883, 60)
+    client.connect("172.30.0.3", 1883, 60)
     threading.Thread(target=client.loop_forever).start()
 
     realtime = False
