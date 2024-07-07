@@ -2,6 +2,9 @@
 #include "sdspi.h"
 #include "wifi.h"
 #include "mqtt.h"
+#include "servo.c"
+
+#define MOTOR_GPIO 10
 
 struct boat
 {
@@ -45,6 +48,13 @@ void app_main(void)
 
     /*MQTT Configuration*/
     mqtt_init();
+
+    /*Servo Configuration*/
+    config_servo_init();
+
+    /*Motor Configuration*/
+    gpio_reset_pin(MOTOR_GPIO);
+    gpio_set_direction(MOTOR_GPIO, GPIO_MODE_OUTPUT);
 
     /*BME280 Configuration*/
 
@@ -134,15 +144,15 @@ void app_main(void)
         {
             boat.turn_motor = false;
         }
-        else if (strcmp(topic_boat, "servo0") == 0)
+        else if (strcmp(topic_boat, "servo_middle") == 0)
         {
             boat.servo_direction = 0;
         }
-        else if (strcmp(topic_boat, "servo1") == 0)
+        else if (strcmp(topic_boat, "servo_left") == 0)
         {
-            boat.servo_direction = 0;
+            boat.servo_direction = 1;
         }
-        else if (strcmp(topic_boat, "servo2") == 0)
+        else if (strcmp(topic_boat, "servo_right") == 0)
         {
             boat.servo_direction = 2;
         }
@@ -156,14 +166,25 @@ void app_main(void)
         if (boat.turn_motor)
         {
             ESP_LOGI("MOTOR", "Turning motor...");
-            // TODO: Turn motor
-        }
+            gpio_set_level(MOTOR_GPIO, 1);
+        }else{
+            gpio_set_level(MOTOR_GPIO, 0);}
 
         /*Servo control*/
-        if (boat.servo_direction == 1 || boat.servo_direction == 2 || boat.servo_direction == 3 || boat.servo_direction == 4)
+        if (boat.servo_direction == 1 || boat.servo_direction == 2 || boat.servo_direction == 0)
         {
             ESP_LOGI("SERVO", "Turning servo...");
-            // TODO: Turn servo motor in the specified direction
+            if (boat.servo_direction == 1)
+            {
+                set_servo_angle(90);
+            }
+            else if (boat.servo_direction == 2)
+            {
+                set_servo_angle(-90);
+            }
+            else{
+                set_servo_angle(0);
+            }
         }
 
         /*Get sensor data*/

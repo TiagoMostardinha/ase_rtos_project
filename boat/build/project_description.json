@@ -1,7 +1,7 @@
 {
     "version":            "1.1",
     "project_name":       "boat",
-    "project_version":    "470b575-dirty",
+    "project_version":    "4a1f073-dirty",
     "project_path":       "/home/tiago/DiscoD/repository/ase_rtos_project/boat",
     "idf_path":           "/home/tiago/esp/esp-idf",
     "build_dir":          "/home/tiago/DiscoD/repository/ase_rtos_project/boat/build",
@@ -805,7 +805,7 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
             "file": "/home/tiago/DiscoD/repository/ase_rtos_project/boat/build/esp-idf/main/libmain.a",
-            "sources": [ "/home/tiago/DiscoD/repository/ase_rtos_project/boat/main/boat.c", "/home/tiago/DiscoD/repository/ase_rtos_project/boat/main/bme280_defs.h", "/home/tiago/DiscoD/repository/ase_rtos_project/boat/main/bme280.h", "/home/tiago/DiscoD/repository/ase_rtos_project/boat/main/bme280.c", "/home/tiago/DiscoD/repository/ase_rtos_project/boat/main/sdspi.h", "/home/tiago/DiscoD/repository/ase_rtos_project/boat/main/sdspi.c", "/home/tiago/DiscoD/repository/ase_rtos_project/boat/main/wifi.h", "/home/tiago/DiscoD/repository/ase_rtos_project/boat/main/wifi.c", "/home/tiago/DiscoD/repository/ase_rtos_project/boat/main/mqtt.h", "/home/tiago/DiscoD/repository/ase_rtos_project/boat/main/mqtt.c" ],
+            "sources": [ "/home/tiago/DiscoD/repository/ase_rtos_project/boat/main/boat.c", "/home/tiago/DiscoD/repository/ase_rtos_project/boat/main/bme280_defs.h", "/home/tiago/DiscoD/repository/ase_rtos_project/boat/main/bme280.h", "/home/tiago/DiscoD/repository/ase_rtos_project/boat/main/bme280.c", "/home/tiago/DiscoD/repository/ase_rtos_project/boat/main/sdspi.h", "/home/tiago/DiscoD/repository/ase_rtos_project/boat/main/sdspi.c", "/home/tiago/DiscoD/repository/ase_rtos_project/boat/main/wifi.h", "/home/tiago/DiscoD/repository/ase_rtos_project/boat/main/wifi.c", "/home/tiago/DiscoD/repository/ase_rtos_project/boat/main/mqtt.h", "/home/tiago/DiscoD/repository/ase_rtos_project/boat/main/mqtt.c", "/home/tiago/DiscoD/repository/ase_rtos_project/boat/main/servo.c" ],
             "include_dirs": [ "." ]
         },
         "mbedtls": {

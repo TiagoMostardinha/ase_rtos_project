@@ -12,6 +12,7 @@
         "esp_wifi.h": "c",
         "esp_event.h": "c",
         "wifi.h": "c",
-        "esp_system.h": "c"
+        "esp_system.h": "c",
+        "sdspi.h": "c"
     }
 }

@@ -34,7 +34,7 @@ def main():
     client = mqtt.Client(mqtt.CallbackAPIVersion.VERSION2)
     client.on_connect = on_connect
     client.on_message = on_message
-    client.connect("172.30.0.3", 1883, 60)
+    client.connect("172.30.0.2", 1883, 60)
     threading.Thread(target=client.loop_forever).start()
 
     realtime = False
@@ -45,9 +45,9 @@ def main():
     print("f - Send file")
     print("o - Motor on/off")
     print("q - Boat off")
-    print("a - Servo 0")
-    print("d - Servo 2")
-    print("s - Servo 1")
+    print("a - Servo Left")
+    print("d - Servo Right")
+    print("s - Servo Middle")
 
 
 
@@ -72,11 +72,11 @@ def main():
         elif cmd == 'q':
             client.publish("boat/in", "boatoff")
         elif cmd == 'a':
-            client.publish("boat/in", "servo0")
+            client.publish("boat/in", "servo_left")
         elif cmd == 'd':
-            client.publish("boat/in", "servo2")
+            client.publish("boat/in", "servo_right")
         elif cmd == 's':
-            client.publish("boat/in", "servo1")
+            client.publish("boat/in", "servo_middle")
 
         time.sleep(0.1)
 

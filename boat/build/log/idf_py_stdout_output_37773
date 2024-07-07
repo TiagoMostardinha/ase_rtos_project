@@ -1,0 +1,360 @@
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x1 (POWERON),boot:0xf (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x1738
+load:0x403cc710,len:0xb9c
+load:0x403ce710,len:0x2e40
+entry 0x403cc71a
+[0;32mI (30) boot: ESP-IDF v5.2.1-dirty 2nd stage bootloader[0m
+[0;32mI (30) boot: compile time Jul  7 2024 02:45:39[0m
+[0;32mI (30) boot: chip revision: v0.3[0m
+[0;32mI (34) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (39) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (43) boot.esp32c3: SPI Flash Size : 2MB[0m
+[0;32mI (48) boot: Enabling RNG early entropy source...[0m
+[0;32mI (53) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (64) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (72) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (79) boot:  2 factory          factory app      00 00 00010000 00177000[0m
+[0;32mI (87) boot: End of partition table[0m
+[0;32mI (91) esp_image: segment 0: paddr=00010020 vaddr=3c0d0020 size=2b318h (176920) map[0m
+[0;32mI (127) esp_image: segment 1: paddr=0003b340 vaddr=3fc94000 size=02fe0h ( 12256) load[0m
+[0;32mI (129) esp_image: segment 2: paddr=0003e328 vaddr=40380000 size=01cf0h (  7408) load[0m
+[0;32mI (134) esp_image: segment 3: paddr=00040020 vaddr=42000020 size=c13c4h (791492) map[0m
+[0;32mI (265) esp_image: segment 4: paddr=001013ec vaddr=40381cf0 size=12194h ( 74132) load[0m
+[0;32mI (285) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (285) boot: Disabling RNG early entropy source...[0m
+[0;32mI (297) cpu_start: Unicore app[0m
+[0;32mI (305) cpu_start: Pro cpu start user code[0m
+[0;32mI (305) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (306) cpu_start: Application information:[0m
+[0;32mI (308) cpu_start: Project name:     boat[0m
+[0;32mI (313) cpu_start: App version:      4a1f073-dirty[0m
+[0;32mI (319) cpu_start: Compile time:     Jul  7 2024 02:45:15[0m
+[0;32mI (325) cpu_start: ELF file SHA256:  f56e69f34...[0m
+[0;32mI (330) cpu_start: ESP-IDF:          v5.2.1-dirty[0m
+[0;32mI (335) cpu_start: Min chip rev:     v0.3[0m
+[0;32mI (340) cpu_start: Max chip rev:     v1.99 [0m
+[0;32mI (345) cpu_start: Chip rev:         v0.3[0m
+[0;32mI (350) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (357) heap_init: At 3FC9B910 len 000246F0 (145 KiB): RAM[0m
+[0;32mI (363) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (370) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (377) heap_init: At 50000010 len 00001FD8 (7 KiB): RTCRAM[0m
+[0;32mI (384) spi_flash: detected chip: generic[0m
+[0;32mI (388) spi_flash: flash io: dio[0m
+[0;33mW (392) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (406) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (412) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (419) main_task: Started on CPU0[0m
+[0;32mI (419) main_task: Calling app_main()[0m
+[0;32mI (419) BME280: Starting BME280...[0m
+[0;32mI (439) pp: pp rom version: 9387209[0m
+[0;32mI (439) net80211: net80211 rom version: 9387209[0m
+I (449) wifi:wifi driver task: 3fca44c0, prio:23, stack:6656, core=0
+I (449) wifi:wifi firmware version: a9f5b59
+I (449) wifi:wifi certification version: v7.0
+I (449) wifi:config NVS flash: enabled
+I (449) wifi:config nano formating: disabled
+I (459) wifi:Init data frame dynamic rx buffer num: 32
+I (459) wifi:Init static rx mgmt buffer num: 5
+I (469) wifi:Init management short buffer num: 32
+I (469) wifi:Init dynamic tx buffer num: 32
+I (479) wifi:Init static tx FG buffer num: 2
+I (479) wifi:Init static rx buffer size: 1600
+I (479) wifi:Init static rx buffer num: 10
+I (489) wifi:Init dynamic rx buffer num: 32
+[0;32mI (489) wifi_init: rx ba win: 6[0m
+[0;32mI (499) wifi_init: tcpip mbox: 32[0m
+[0;32mI (499) wifi_init: udp mbox: 6[0m
+[0;32mI (499) wifi_init: tcp mbox: 6[0m
+[0;32mI (509) wifi_init: tcp tx win: 5760[0m
+[0;32mI (509) wifi_init: tcp rx win: 5760[0m
+[0;32mI (509) wifi_init: tcp mss: 1440[0m
+[0;32mI (519) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (519) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (529) phy_init: phy_version 1150,7c3c08f,Jan 24 2024,17:32:21[0m
+I (569) wifi:mode : sta (68:67:25:e8:3e:24)
+I (569) wifi:enable tsf
+[0;32mI (569) wifi station: wifi_init_sta finished.[0m
+I (579) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1
+I (579) wifi:state: init -> auth (b0)
+I (619) wifi:state: auth -> assoc (0)
+I (629) wifi:state: assoc -> run (10)
+I (639) wifi:connected with fedora40, aid = 1, channel 11, BW20, bssid = ae:04:78:e8:ff:28
+I (639) wifi:security: WPA2-PSK, phy: bgn, rssi: -34
+I (639) wifi:pm start, type: 1
+
+I (639) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us
+I (649) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000
+I (679) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us
+I (679) wifi:AP's beacon interval = 102400 us, DTIM period = 2
+[0;32mI (1659) esp_netif_handlers: sta ip: 10.42.0.40, mask: 255.255.255.0, gw: 10.42.0.1[0m
+[0;32mI (1659) wifi station: got ip:10.42.0.40[0m
+[0;32mI (1659) wifi station: connected to ap SSID:fedora40 password:fedora40[0m
+[0;32mI (1669) MQTT: Other event id:7[0m
+[0;32mI (1669) gpio: GPIO[10]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (1679) BME280: Initializing BME280...[0m
+[0;32mI (1679) gpio: GPIO[3]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (1689) gpio: GPIO[2]| InputEn: 1| OutputEn: 1| OpenDrain: 1| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (1699) BME280: Setting BME280 sensor...[0m
+[0;32mI (1709) BME280: Getting BME280 calibration data...[0m
+[0;32mI (1809) BME280: Setting BME280 in normal mode...[0m
+[0;32mI (1809) SDSPI: Initializing SD card...[0m
+[0;32mI (1809) SDSPI: Mounting SD card...[0m
+[0;32mI (1809) gpio: GPIO[1]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (1819) sdspi_transaction: cmd=52, R1 response: command not supported[0m
+[0;32mI (1869) sdspi_transaction: cmd=5, R1 response: command not supported[0m
+Name: APPSD
+Type: SDHC/SDXC
+Speed: 20.00 MHz (limit: 20.00 MHz)
+Size: 256001MB
+CSD: ver=2, sector_size=512, capacity=524290048 read_bl_len=9
+SSR: bus_width=1
+[0;32mI (2839) MQTT: MQTT_EVENT_CONNECTED[0m
+[0;32mI (2839) MQTT: sent subscribe successful, msg_id=1336[0m
+[0;32mI (2839) MQTT: sent subscribe successful, msg_id=64665[0m
+[0;32mI (2849) MQTT: MQTT_EVENT_SUBSCRIBED, msg_id=1336[0m
+[0;32mI (2849) MQTT: MQTT_EVENT_SUBSCRIBED, msg_id=64665[0m
+[0;32mI (2899) SERVO: Turning servo...[0m
+[0;32mI (2899) BME280: Temperature: 24.22 C, Pressure: 3.84 Pa, Humidity: 51.76 %[0m
+[0;32mI (2899) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (3899) SERVO: Turning servo...[0m
+[0;32mI (3899) BME280: Temperature: 24.23 C, Pressure: 3.99 Pa, Humidity: 51.77 %[0m
+[0;32mI (3899) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (4909) SERVO: Turning servo...[0m
+[0;32mI (4909) BME280: Temperature: 24.22 C, Pressure: 3.99 Pa, Humidity: 51.62 %[0m
+[0;32mI (4909) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (5919) SERVO: Turning servo...[0m
+[0;32mI (5919) BME280: Temperature: 24.23 C, Pressure: 3.99 Pa, Humidity: 51.46 %[0m
+[0;32mI (5919) MQTT: Sending data to MQTT broker...[0m
+I (5929) wifi:<ba-add>idx:0 (ifx:0, ae:04:78:e8:ff:28), tid:0, ssn:18, winSize:64
+[0;32mI (6929) SERVO: Turning servo...[0m
+[0;32mI (6929) BME280: Temperature: 24.22 C, Pressure: 3.99 Pa, Humidity: 51.37 %[0m
+[0;32mI (6929) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (7939) SERVO: Turning servo...[0m
+[0;32mI (7939) BME280: Temperature: 24.22 C, Pressure: 3.99 Pa, Humidity: 51.33 %[0m
+[0;32mI (7939) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (7949) MQTT: MQTT_EVENT_DATA[0m
+TOPIC=boat/in
+DATA=realtime
+[0;32mI (8949) SERVO: Turning servo...[0m
+[0;32mI (8949) BME280: Temperature: 24.23 C, Pressure: 3.99 Pa, Humidity: 51.28 %[0m
+[0;32mI (8949) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (9959) SERVO: Turning servo...[0m
+[0;32mI (9959) BME280: Temperature: 24.23 C, Pressure: 3.99 Pa, Humidity: 51.27 %[0m
+[0;32mI (9959) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (10969) SERVO: Turning servo...[0m
+[0;32mI (10969) BME280: Temperature: 24.23 C, Pressure: 3.99 Pa, Humidity: 51.25 %[0m
+[0;32mI (10969) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (11979) SERVO: Turning servo...[0m
+[0;32mI (11979) BME280: Temperature: 24.22 C, Pressure: 3.99 Pa, Humidity: 51.25 %[0m
+[0;32mI (11979) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (12989) SERVO: Turning servo...[0m
+[0;32mI (12989) BME280: Temperature: 24.22 C, Pressure: 3.99 Pa, Humidity: 51.25 %[0m
+[0;32mI (12989) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (13999) SERVO: Turning servo...[0m
+[0;32mI (13999) BME280: Temperature: 24.23 C, Pressure: 3.99 Pa, Humidity: 51.19 %[0m
+[0;32mI (13999) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (14019) MQTT: MQTT_EVENT_DATA[0m
+TOPIC=boat/in
+DATA=realtime_off
+[0;32mI (15009) SERVO: Turning servo...[0m
+[0;32mI (15009) BME280: Temperature: 24.23 C, Pressure: 3.99 Pa, Humidity: 51.21 %[0m
+[0;32mI (15009) SDSPI: Writing data to file...[0m
+[0;32mI (16019) SERVO: Turning servo...[0m
+[0;32mI (16019) BME280: Temperature: 24.22 C, Pressure: 3.99 Pa, Humidity: 51.23 %[0m
+[0;32mI (16019) SDSPI: Writing data to file...[0m
+[0;32mI (17029) SERVO: Turning servo...[0m
+[0;32mI (17029) BME280: Temperature: 24.22 C, Pressure: 3.98 Pa, Humidity: 51.21 %[0m
+[0;32mI (17029) SDSPI: Writing data to file...[0m
+[0;32mI (18039) SERVO: Turning servo...[0m
+[0;32mI (18039) BME280: Temperature: 24.22 C, Pressure: 3.99 Pa, Humidity: 51.24 %[0m
+[0;32mI (18039) SDSPI: Writing data to file...[0m
+[0;32mI (19049) SERVO: Turning servo...[0m
+[0;32mI (19049) BME280: Temperature: 24.22 C, Pressure: 3.99 Pa, Humidity: 51.25 %[0m
+[0;32mI (19049) SDSPI: Writing data to file...[0m
+[0;32mI (20059) SERVO: Turning servo...[0m
+[0;32mI (20059) BME280: Temperature: 24.23 C, Pressure: 3.99 Pa, Humidity: 51.26 %[0m
+[0;32mI (20059) SDSPI: Writing data to file...[0m
+[0;32mI (21069) SERVO: Turning servo...[0m
+[0;32mI (21069) BME280: Temperature: 24.23 C, Pressure: 3.99 Pa, Humidity: 51.25 %[0m
+[0;32mI (21069) SDSPI: Writing data to file...[0m
+[0;32mI (22079) SERVO: Turning servo...[0m
+[0;32mI (22079) BME280: Temperature: 24.22 C, Pressure: 3.99 Pa, Humidity: 51.25 %[0m
+[0;32mI (22079) SDSPI: Writing data to file...[0m
+[0;32mI (23089) SERVO: Turning servo...[0m
+[0;32mI (23089) BME280: Temperature: 24.22 C, Pressure: 3.99 Pa, Humidity: 51.23 %[0m
+[0;32mI (23089) SDSPI: Writing data to file...[0m
+[0;32mI (23109) MQTT: MQTT_EVENT_DATA[0m
+TOPIC=boat/in
+DATA=servo_left
+[0;32mI (24099) SERVO: Turning servo...[0m
+[0;32mI (24099) BME280: Temperature: 24.22 C, Pressure: 3.98 Pa, Humidity: 51.23 %[0m
+[0;32mI (24099) SDSPI: Writing data to file...[0m
+[0;32mI (25109) SERVO: Turning servo...[0m
+[0;32mI (25109) BME280: Temperature: 24.23 C, Pressure: 3.99 Pa, Humidity: 51.24 %[0m
+[0;32mI (25109) SDSPI: Writing data to file...[0m
+[0;32mI (26119) SERVO: Turning servo...[0m
+[0;32mI (26119) BME280: Temperature: 24.22 C, Pressure: 3.99 Pa, Humidity: 51.20 %[0m
+[0;32mI (26119) SDSPI: Writing data to file...[0m
+[0;32mI (26389) MQTT: MQTT_EVENT_DATA[0m
+TOPIC=boat/in
+DATA=servo_right
+[0;32mI (27129) SERVO: Turning servo...[0m
+[0;32mI (27129) BME280: Temperature: 24.23 C, Pressure: 3.99 Pa, Humidity: 51.17 %[0m
+[0;32mI (27129) SDSPI: Writing data to file...[0m
+[0;32mI (28139) SERVO: Turning servo...[0m
+[0;32mI (28139) BME280: Temperature: 24.22 C, Pressure: 3.99 Pa, Humidity: 51.12 %[0m
+[0;32mI (28139) SDSPI: Writing data to file...[0m
+[0;32mI (29149) SERVO: Turning servo...[0m
+[0;32mI (29149) BME280: Temperature: 24.22 C, Pressure: 3.99 Pa, Humidity: 51.11 %[0m
+[0;32mI (29149) SDSPI: Writing data to file...[0m
+[0;32mI (29869) MQTT: MQTT_EVENT_DATA[0m
+TOPIC=boat/in
+DATA=servo_middle
+[0;32mI (30159) SERVO: Turning servo...[0m
+[0;32mI (30159) BME280: Temperature: 24.23 C, Pressure: 3.99 Pa, Humidity: 51.07 %[0m
+[0;32mI (30159) SDSPI: Writing data to file...[0m
+[0;32mI (31169) SERVO: Turning servo...[0m
+[0;32mI (31169) BME280: Temperature: 24.22 C, Pressure: 3.99 Pa, Humidity: 51.04 %[0m
+[0;32mI (31169) SDSPI: Writing data to file...[0m
+[0;32mI (32179) SERVO: Turning servo...[0m
+[0;32mI (32179) BME280: Temperature: 24.22 C, Pressure: 3.99 Pa, Humidity: 51.05 %[0m
+[0;32mI (32179) SDSPI: Writing data to file...[0m
+[0;32mI (33189) SERVO: Turning servo...[0m
+[0;32mI (33189) BME280: Temperature: 24.22 C, Pressure: 3.99 Pa, Humidity: 51.07 %[0m
+[0;32mI (33189) SDSPI: Writing data to file...[0m
+[0;32mI (34199) SERVO: Turning servo...[0m
+[0;32mI (34199) BME280: Temperature: 24.22 C, Pressure: 3.98 Pa, Humidity: 51.08 %[0m
+[0;32mI (34199) SDSPI: Writing data to file...[0m
+[0;32mI (34989) MQTT: MQTT_EVENT_DATA[0m
+TOPIC=boat/in
+DATA=realtime
+[0;32mI (35209) SERVO: Turning servo...[0m
+[0;32mI (35209) BME280: Temperature: 24.22 C, Pressure: 3.99 Pa, Humidity: 51.20 %[0m
+[0;32mI (35209) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (36209) SERVO: Turning servo...[0m
+[0;32mI (36209) BME280: Temperature: 24.22 C, Pressure: 3.98 Pa, Humidity: 51.27 %[0m
+[0;32mI (36209) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (37219) SERVO: Turning servo...[0m
+[0;32mI (37219) BME280: Temperature: 24.22 C, Pressure: 3.99 Pa, Humidity: 51.29 %[0m
+[0;32mI (37219) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (38229) SERVO: Turning servo...[0m
+[0;32mI (38229) BME280: Temperature: 24.22 C, Pressure: 3.98 Pa, Humidity: 51.32 %[0m
+[0;32mI (38229) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (38879) MQTT: MQTT_EVENT_DATA[0m
+TOPIC=boat/in
+DATA=sendfile
+[0;32mI (39239) SERVO: Turning servo...[0m
+[0;32mI (39239) BME280: Temperature: 24.22 C, Pressure: 3.98 Pa, Humidity: 51.33 %[0m
+[0;32mI (39239) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (40409) MQTT: MQTT_EVENT_DATA[0m
+TOPIC=boat/in
+DATA= 
+[0;32mI (41419) SERVO: Turning servo...[0m
+[0;32mI (41419) BME280: Temperature: 24.22 C, Pressure: 3.99 Pa, Humidity: 51.35 %[0m
+[0;32mI (41419) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (42429) SERVO: Turning servo...[0m
+[0;32mI (42429) BME280: Temperature: 24.22 C, Pressure: 3.99 Pa, Humidity: 51.27 %[0m
+[0;32mI (42429) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (43439) SERVO: Turning servo...[0m
+[0;32mI (43439) BME280: Temperature: 24.22 C, Pressure: 3.99 Pa, Humidity: 51.20 %[0m
+[0;32mI (43439) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (44409) MQTT: MQTT_EVENT_DATA[0m
+TOPIC=boat/in
+DATA=motor
+[0;32mI (44449) MOTOR: Turning motor...[0m
+[0;32mI (44449) SERVO: Turning servo...[0m
+[0;32mI (44449) BME280: Temperature: 24.22 C, Pressure: 3.98 Pa, Humidity: 51.16 %[0m
+[0;32mI (44449) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (45459) MOTOR: Turning motor...[0m
+[0;32mI (45459) SERVO: Turning servo...[0m
+[0;32mI (45459) BME280: Temperature: 24.22 C, Pressure: 3.98 Pa, Humidity: 51.13 %[0m
+[0;32mI (45459) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (46469) MOTOR: Turning motor...[0m
+[0;32mI (46469) SERVO: Turning servo...[0m
+[0;32mI (46469) BME280: Temperature: 24.22 C, Pressure: 3.98 Pa, Humidity: 51.11 %[0m
+[0;32mI (46469) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (47479) MOTOR: Turning motor...[0m
+[0;32mI (47479) SERVO: Turning servo...[0m
+[0;32mI (47479) BME280: Temperature: 24.21 C, Pressure: 3.98 Pa, Humidity: 51.15 %[0m
+[0;32mI (47479) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (48489) MOTOR: Turning motor...[0m
+[0;32mI (48489) SERVO: Turning servo...[0m
+[0;32mI (48489) BME280: Temperature: 24.21 C, Pressure: 3.99 Pa, Humidity: 51.14 %[0m
+[0;32mI (48489) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (48919) MQTT: MQTT_EVENT_DATA[0m
+TOPIC=boat/in
+DATA=motoroff
+[0;32mI (49499) SERVO: Turning servo...[0m
+[0;32mI (49499) BME280: Temperature: 24.21 C, Pressure: 3.99 Pa, Humidity: 51.16 %[0m
+[0;32mI (49499) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (50509) SERVO: Turning servo...[0m
+[0;32mI (50509) BME280: Temperature: 24.21 C, Pressure: 3.99 Pa, Humidity: 51.19 %[0m
+[0;32mI (50509) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (51519) SERVO: Turning servo...[0m
+[0;32mI (51519) BME280: Temperature: 24.21 C, Pressure: 3.98 Pa, Humidity: 51.21 %[0m
+[0;32mI (51519) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (51779) MQTT: MQTT_EVENT_DATA[0m
+TOPIC=boat/in
+DATA=motor
+[0;32mI (52529) MOTOR: Turning motor...[0m
+[0;32mI (52529) SERVO: Turning servo...[0m
+[0;32mI (52529) BME280: Temperature: 24.21 C, Pressure: 3.98 Pa, Humidity: 51.21 %[0m
+[0;32mI (52529) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (53539) MOTOR: Turning motor...[0m
+[0;32mI (53539) SERVO: Turning servo...[0m
+[0;32mI (53539) BME280: Temperature: 24.22 C, Pressure: 3.99 Pa, Humidity: 51.23 %[0m
+[0;32mI (53539) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (54439) MQTT: MQTT_EVENT_DATA[0m
+TOPIC=boat/in
+DATA=servo_left
+[0;32mI (54549) MOTOR: Turning motor...[0m
+[0;32mI (54549) SERVO: Turning servo...[0m
+[0;32mI (54549) BME280: Temperature: 24.21 C, Pressure: 3.98 Pa, Humidity: 51.18 %[0m
+[0;32mI (54549) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (55559) MOTOR: Turning motor...[0m
+[0;32mI (55559) SERVO: Turning servo...[0m
+[0;32mI (55559) BME280: Temperature: 24.21 C, Pressure: 3.98 Pa, Humidity: 51.08 %[0m
+[0;32mI (55559) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (56289) MQTT: MQTT_EVENT_DATA[0m
+TOPIC=boat/in
+DATA=servo_right
+[0;32mI (56569) MOTOR: Turning motor...[0m
+[0;32mI (56569) SERVO: Turning servo...[0m
+[0;32mI (56569) BME280: Temperature: 24.21 C, Pressure: 3.99 Pa, Humidity: 51.05 %[0m
+[0;32mI (56569) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (57579) MOTOR: Turning motor...[0m
+[0;32mI (57579) SERVO: Turning servo...[0m
+[0;32mI (57579) BME280: Temperature: 24.21 C, Pressure: 3.99 Pa, Humidity: 51.02 %[0m
+[0;32mI (57579) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (57929) MQTT: MQTT_EVENT_DATA[0m
+TOPIC=boat/in
+DATA=motoroff
+[0;32mI (58589) SERVO: Turning servo...[0m
+[0;32mI (58589) BME280: Temperature: 24.20 C, Pressure: 3.98 Pa, Humidity: 50.98 %[0m
+[0;32mI (58589) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (59599) SERVO: Turning servo...[0m
+[0;32mI (59599) BME280: Temperature: 24.20 C, Pressure: 3.99 Pa, Humidity: 50.94 %[0m
+[0;32mI (59599) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (60609) SERVO: Turning servo...[0m
+[0;32mI (60609) BME280: Temperature: 24.20 C, Pressure: 3.99 Pa, Humidity: 50.95 %[0m
+[0;32mI (60609) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (61609) SERVO: Turning servo...[0m
+[0;32mI (61609) BME280: Temperature: 24.20 C, Pressure: 3.98 Pa, Humidity: 50.95 %[0m
+[0;32mI (61609) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (62619) SERVO: Turning servo...[0m
+[0;32mI (62619) BME280: Temperature: 24.21 C, Pressure: 3.98 Pa, Humidity: 50.96 %[0m
+[0;32mI (62619) MQTT: Sending data to MQTT broker...[0m
+[0;32mI (62979) MQTT: MQTT_EVENT_DATA[0m
+TOPIC=boat/in
+DATA=boatoff
+[0;32mI (63629) gpio: GPIO[1]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (63629) gpio: GPIO[4]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (63629) gpio: GPIO[6]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (63639) gpio: GPIO[5]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (63649) main_task: Returned from app_main()[0m
